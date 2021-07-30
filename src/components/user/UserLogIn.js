@@ -23,12 +23,15 @@ class UserLogIn extends Component {
     render() {
         return (
             <div className="log-in" style={{position: "fixed", top: "180px"}}>
+                <h2>Log in to Job Getter!</h2>
+                <br/>
                 <form onSubmit={this.handleOnSubmit}>
-                    <label className="label has-text-white"><strong>Username:</strong></label>
+                    <label className="label has-text-white"><strong>Username: </strong></label>
                     <input className="input" type="text" name="username" value={this.state.username} onChange={this.handleOnChange} />
-                    <label className="label has-text-white"><strong>Password:</strong></label>
+                    <br/><br/>
+                    <label className="label has-text-white"><strong>Password: </strong></label>
                     <input className="input" type="password" name="password" value={this.state.password} onChange={this.handleOnChange} />
-                    <br />
+                    <br/><br/>
                     <button className="button is-link" type="submit">Log In</button>
                 </form>
             </div>

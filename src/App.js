@@ -9,12 +9,13 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import InvalidPath from "./components/InvalidPath";
-import background from "./images/background1.png";
+// import background from "./images/background1.png";
 
+// style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', }}
 
 function App() {
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', }}>
+    <div className="App">
       <Router>
         <NavBar />
          <Switch>
@@ -27,23 +28,6 @@ function App() {
             <InvalidPath />
           </Route>
          </Switch>
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
          <Footer />
       </Router>
     </div>

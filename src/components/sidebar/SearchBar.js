@@ -11,7 +11,7 @@ class SearchBar extends Component {
         job_location: ""
     }
 
-    handleOnChange = (event) =>{
+    handleOnChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
         });
@@ -39,27 +39,32 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="search-bar has-text-white" style={{position: "fixed", top: "180px"}}>
+            <div className="search-bar has-text-white">
                 <form className="search-form">
-                    <label className="label"><h2>Search for Top Tech Jobs:</h2></label>
-                    <label className="label"><h4>Job Title Search:</h4></label>
+                    <label className="label"><h3>Search for Top Tech Jobs: </h3></label>
+                    <br/>
+                    <label className="label"><h4>Job Title Search: </h4></label>
                     <div className="control">
                         <input className="input" type="text" name="job_title" placeholder="Input Job Title" value={this.state.job_title} onChange={this.handleOnChange} />
                     </div>
-                    <label className="label"><h4>Company Search:</h4></label>
+                    <br/>
+                    <label className="label"><h4>Company Search: </h4></label>
                     <div className="control">
                         <input className="input" type="text" name="company" placeholder="Input Company" value={this.state.company} onChange={this.handleOnChange} />
                     </div>
-                    <label className="label"><h4>Location Search:</h4></label>
+                    <br/>
+                    <label className="label"><h4>Location Search: </h4></label>
                     <div className="control">
                         <select name="location" onChange={this.handleOnChange}>
-                            <option value="">None</option> 
+                            <option value="n/a">None</option>
+                            <option value="r">Remote</option> 
                             <option value="ny">New York</option>
                             <option value="sf">San Francisco</option>
                             <option value="mv">Mountain View</option>
                             <option value="pa">Palo Alto</option>
                         </select>
                     </div>
+                    <br/>
                     <div className="buttons">
                         <button className="button is-primary" id="submit" onClick={this.handleOnClick}>Submit</button>
                         <button className="button is-danger" type="reset" id="reset" onClick={this.handleOnClick}>Reset</button>

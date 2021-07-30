@@ -10,7 +10,10 @@ class JobList extends Component {
                    job_title={job.job_title}
                    company={job.company}
                    job_location={job.job_location}
-                   est_salary={job.est_salary} />
+                   est_salary={job.est_salary} 
+                   min_reqs={job.min_reqs}
+                   preferred_reqs={job.preferred_reqs}
+                   responsibilities={job.responsibilities}/>
     });
     console.log(cards);
     return (

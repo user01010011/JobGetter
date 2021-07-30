@@ -14,27 +14,23 @@ const NavBar = (props) => {
     return (
         <div>
             <nav className="navbar is-fixed-top is-warning">
-                <nav className="navbar-buttons navbar-start pt-1" style={{ marginRight: "0px"}}>
-                    <button className="button is-primary" style={{ marginLeft: "10px", marginRight: "10px" }} name="/" onClick={routeChange}>Home</button>
-                    <button className="button is-info" style={{ marginLeft: "10px", marginRight: "10px" }} name="/about" onClick={routeChange}>About</button>
-                    <button className="button is-success" style={{ marginLeft: "10px", marginRight: "10px" }} name="/contact" onClick={routeChange}>Contact</button>
+                <nav className="navbar-buttons navbar-start pt-1" >
+                    <button className="button is-primary" id="home" name="/" onClick={routeChange}>Home</button>
+                    <button className="button is-info" id="about" name="/about" onClick={routeChange}>About</button>
+                    <button className="button is-success" id="contact" name="/contact" onClick={routeChange}>Contact</button>
                 </nav>
                 <nav className="error-message navbar-end pt-3" style={{ color:"red" }}>
                     {props.errorMessage}
                 </nav>
-
-                <nav className="signup-login-button navbar-end pt-1" style={{ marginBottom: "10px"}}>
-                    {
-                        (props.isLoggedIn) ? 
-                        (
+                <nav className="signup-login-button navbar-end pt-1"> {
+                        (props.isLoggedIn) ? (
                             <div className="navbar-logout">
-                                <button className="button is-danger" name="/logout" onClick={() => dispatch(userLogOut(history))}>Log Out</button>
+                                <button className="button is-danger" id="logout" name="/logout" onClick={() => dispatch(userLogOut(history))}>Log Out</button>
                             </div>
-                        ) :
-                        (
+                        ) : (
                             <div className="navbar-auth">
-                                <button className="button is-primary" style={{ marginLeft: "10px", marginRight: "10px" }} name="/login" onClick={routeChange}>Log In</button>
-                                <button className="button is-info" style={{ marginLeft: "10px", marginRight: "10px" }} name="/signup" onClick={routeChange}>Sign Up</button>
+                                <button className="button is-primary" id="login" name="/login" onClick={routeChange}>Log In</button>
+                                <button className="button is-info" id="sigup" name="/signup" onClick={routeChange}>Sign Up</button>
                             </div>
                         )
                     }
