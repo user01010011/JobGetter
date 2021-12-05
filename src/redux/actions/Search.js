@@ -1,10 +1,10 @@
 // const BASE_URL = "http://localhost:3000/users"
-const URL = "http://localhost:3000/jobs"
+const URL = "http://localhost:3000/search"
 
 // export const searchQuery = (currentUser) => {
-    export const searchQuery = (_queries) => {
+export const searchQuery = () => {
     // const url = new URL("http://localhost:3000/jobs#search");
-    // url.search = new URLSearchParams(queries);
+    // URL.search = new URLSearchParams(queries);
     // const URL = BASE_URL + `/${currentUser.id}/jobs`;
     return (
         dispatch => {
@@ -32,3 +32,13 @@ export const clearSearch = () => {
         }
     );
 }
+
+// export const sortSearch = () => {
+//     return (
+//         dispatch => {
+//             dispatch({
+//                 type: "SORT_SEARCH"
+//             })
+//         }
+//     );
+// }

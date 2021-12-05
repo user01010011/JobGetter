@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { searchQuery, clearSearch } from "../../redux/actions/Search";
+// import { searchQuery, clearSearch, sortSearch } from "../../redux/actions/Search";
 import { sortFavorites } from "../../redux/actions/Favorites";
 
 class SearchBar extends Component {
@@ -34,6 +35,7 @@ class SearchBar extends Component {
         else if (event.target.id === "sort"){
             event.preventDefault();
             this.props.sortFavorites();
+            // this.props.sortSearch();
         }
     }
 
@@ -55,13 +57,16 @@ class SearchBar extends Component {
                     <br/>
                     <label className="label"><h4>Location Search: </h4></label>
                     <div className="control">
-                        <select name="location" onChange={this.handleOnChange}>
+                        <select name="location" value={this.state.job_location} onChange={this.handleOnChange}>
                             <option value="n/a">None</option>
                             <option value="r">Remote</option> 
-                            <option value="ny">New York</option>
-                            <option value="sf">San Francisco</option>
-                            <option value="mv">Mountain View</option>
-                            <option value="pa">Palo Alto</option>
+                            <option value="ny">New York, NY</option>
+                            <option value="sf">San Francisco, CA</option>
+                            <option value="mv">Mountain View, CA</option>
+                            <option value="pa">Palo Alto, CA</option>
+                            <option value="cu">Cupertino, CA</option>
+                            <option value="au">Austin, TX</option>
+                            <option value="cu">Seattle, WA</option>
                         </select>
                     </div>
                     <br/>
@@ -69,6 +74,7 @@ class SearchBar extends Component {
                         <button className="button is-primary" id="submit" onClick={this.handleOnClick}>Submit</button>
                         <button className="button is-danger" type="reset" id="reset" onClick={this.handleOnClick}>Reset</button>
                         <button className="button is-warning" id="sort" onClick={this.handleOnClick}>Sort Favorites</button>
+                        {/* <button className="button is-warning" id="sort" onClick={this.handleOnClick}>Sort Searches</button> */}
                     </div>
                 </form>
             </div>
@@ -77,3 +83,4 @@ class SearchBar extends Component {
 }
 
 export default connect(null, { searchQuery, clearSearch, sortFavorites })(SearchBar);
+// export default connect(null, { searchQuery, clearSearch, sortSearch })(SearchBar);

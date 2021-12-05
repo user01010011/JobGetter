@@ -28,7 +28,7 @@ function App() {
             <InvalidPath />
           </Route>
          </Switch>
-         <Footer />
+        <Footer />
       </Router>
     </div>
   );
