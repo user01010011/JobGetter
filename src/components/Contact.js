@@ -10,10 +10,11 @@ const Contact = () => {
             </label>
             <br/>
             <p>
-                Email: shasha@altversity.com 📫 
+                
             </p>
         </div>
     )
 }
 
 export default Contact;
+
