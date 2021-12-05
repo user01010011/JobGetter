@@ -17,7 +17,7 @@ class ContactForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault(); 
-        this.props.contactForm(this.state, this.props.history); 
+        this.props.contactForm(this.state); 
     }
 
     render() {
@@ -31,8 +31,10 @@ class ContactForm extends Component {
                 <br/><br/>
                 <label className="label has-text-white"><strong>Phone Number: </strong></label>
                 <input className="phone-input" type="text" name="phone_number" value={this.state.phone_number} onChange={this.handleOnChange}/>
+                <br/><br/>
                 <label className="label has-text-white"><strong>Email: </strong></label>
                 <input className="email-input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
+                <br/><br/>
                 <label className="label has-text-white"><strong>Message: </strong></label>
                 <input className="message-input" type="text" name="message" value={this.state.message} onChange={this.handleOnChange}/>
                 <br/>
