@@ -36,7 +36,8 @@ class ContactForm extends Component {
                 <input className="email-input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
                 <br/><br/>
                 <label className="label has-text-white"><strong>Message: </strong></label>
-                <input className="message-input" type="text" name="message" value={this.state.message} onChange={this.handleOnChange}/>
+                <textarea className="message-input" type="textarea" name="message" cols="50" rows="10"
+                placeholder="Enter your message..." value={this.state.message} onChange={this.handleOnChange}></textarea>
                 <br/>
                 <br/>
                 <button className="button is-link" type="submit" onClick={this.handleOnSubmit}>Send!</button>
