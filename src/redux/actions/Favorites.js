@@ -94,6 +94,7 @@ export const sortFavorites = () => {
 }
 
 export const clearFavorites = () => {
+    console.log("you clicked X!")
     return(
         dispatch => 
         dispatch({

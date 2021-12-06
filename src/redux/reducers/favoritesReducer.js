@@ -66,28 +66,28 @@ export const favoritesReducer = (state = initialState, action) => {
         }
 
 
-        case "CLEAR_FAVORITES": {
-            return ({
-                favorites: [],
-                message: ""
-            })
-        }
-
-        // case "CLEAR_FAVORITES":
-        //     console.log("You clicked X!")
-        //     const newFavoritesArray = state.favorites.filter(job => job.id !== action.payload.id)
+        // case "CLEAR_FAVORITES": {
         //     return ({
-        //         favorites: [...newFavoritesArray],
+        //         favorites: [],
         //         message: ""
-        //     });
+        //     })
+        // }
 
-        case "DELETE_FAVORITES": {
-            const newFavoritesArray = state.favorites.filter(favorite => favorite.id !== action.payload.id)
+        case "CLEAR_FAVORITES":
+            console.log("You got to favoritesReducer!")
+            const newFavoritesArray = state.favorites.filter(job => job.id !== action.payload.id)
             return ({
                 favorites: [...newFavoritesArray],
                 message: ""
             });
-        }
+
+        // case "DELETE_FAVORITES": {
+        //     const newFavoritesArray = state.favorites.filter(favorite => favorite.id !== action.payload.id)
+        //     return ({
+        //         favorites: [...newFavoritesArray],
+        //         message: ""
+        //     });
+        // }
 
         default: {
             return state;

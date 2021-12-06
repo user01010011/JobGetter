@@ -247,15 +247,9 @@
     /* border: 1px solid;  */
     /* display: inline-block; */
     vertical-align: top; 
+    /* vertical-align: middle; 
+    vertical-align: bottom;  */
     background: white;
-    display: "flex";
-    flexWrap: "wrap";
-    position: "absolute";
-    /* top: 0;
-    left: 0; */
-    height: "100%";
-    width: "100%";
-    alignItems: "center";
   }
 
   /* Fonts: */

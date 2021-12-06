@@ -5,7 +5,7 @@ import { saveFavorites } from "../../redux/actions/Favorites";
 
 const SearchResults = (props) => {
     return (
-        <div className="column search-results" id="display-results-container">
+        <div className="col search-results" id="display-results-container">
             <h3>Search Results: </h3>
             {(props.searchResults.length !== 0) ? (
                 props.searchResults.map((job, i) => 

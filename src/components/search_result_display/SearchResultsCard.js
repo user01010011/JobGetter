@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchResultsCard = (props) => {
     return (
-        <div className="column content has-background-light" id="display-results-card" key={props.id} >
+        <div className="col content has-background-light" id="display-results-card" key={props.id} >
             <ul>
                 <br/>
                 <h4>{props.job.job_title}</h4>

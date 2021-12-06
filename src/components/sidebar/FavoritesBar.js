@@ -20,8 +20,8 @@ class FavoritesBar extends Component {
                         key={i + 1} 
                         id={i + 1} 
                         currentUser={this.props.currentUser} 
-                        // clear={() => (this.props.clearFavorites(job, this.props.currentUser))} 
-                        delete={() => (this.props.deleteFavorites(job, this.props.currentUser))} 
+                        clear={() => (this.props.clearFavorites(job, this.props.currentUser))} 
+                        // delete={() => (this.props.deleteFavorites(job, this.props.currentUser))} 
                         show={() => (this.props.showFavorites(job, this.props.currentUser))} 
                     />)
                 }
