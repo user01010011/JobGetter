@@ -21,7 +21,7 @@ class ContactForm extends Component {
 
     render() {
         return (
-        <div className="contact-form" id="contact-form" style={{position: "fixed", top: "180px"}}>
+        <div className="contact-form has-text-white has-text-centered" id="contact-form" style={{position: "fixed", top: "180px"}}>
             <h2>Contact Us 💌 </h2>
             <br/>
             <form onSubmit={this.handleOnSubmit}>
@@ -34,7 +34,7 @@ class ContactForm extends Component {
                 <label className="label has-text-white"><strong>Email: </strong></label>
                 <input className="email-input" id="email-input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
                 <br/><br/>
-                <label className="label has-text-white" for="message-input"><strong>Message: </strong></label>
+                <label className="label has-text-white"><strong>Message: </strong></label>
                 <textarea className="message-input" id="message-input" type="textarea" name="message" cols="50" rows="10"
                 placeholder="Enter your message..." value={this.state.message} onChange={this.handleOnChange}></textarea>
                 <br/>
