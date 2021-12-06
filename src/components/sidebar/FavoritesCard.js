@@ -4,7 +4,7 @@ const FavoritesCard = (props) => {
     const [likes, setLikes] = useState(0) // [0, f(){}]
     return (
         <div className="favorites-card has-background-light" key={props.id} id={props.id} > 
-        <ul>
+        <ul className="favorite-jobs-list" id="favorite-jobs-list">
             <br/>
             <strong>{props.job_title}</strong>
             <li>Compnay: <strong>{props.company}</strong></li>
