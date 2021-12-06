@@ -26,16 +26,16 @@ class ContactForm extends Component {
             <br/>
             <form onSubmit={this.handleOnSubmit}>
                 <label className="label has-text-white"><strong>Full Name: </strong></label>
-                <input className="name-input" type="text" name="full_name" value={this.state.full_name} onChange={this.handleOnChange}/>
+                <input className="name-input" id="name-input" type="text" name="full_name" value={this.state.full_name} onChange={this.handleOnChange}/>
                 <br/><br/>
                 <label className="label has-text-white"><strong>Phone #: </strong></label>
-                <input className="phone-input" type="text" name="phone_number" value={this.state.phone_number} onChange={this.handleOnChange}/>
+                <input className="phone-input" id="phone-input" type="text" name="phone_number" value={this.state.phone_number} onChange={this.handleOnChange}/>
                 <br/><br/>
                 <label className="label has-text-white"><strong>Email: </strong></label>
-                <input className="email-input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
+                <input className="email-input" id="email-input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
                 <br/><br/>
-                <label className="label has-text-white"><strong>Message: </strong></label>
-                <textarea className="message-input" type="textarea" name="message" cols="50" rows="10"
+                <label className="label has-text-white" for="message-input"><strong>Message: </strong></label>
+                <textarea className="message-input" id="message-input" type="textarea" name="message" cols="50" rows="10"
                 placeholder="Enter your message..." value={this.state.message} onChange={this.handleOnChange}></textarea>
                 <br/>
                 <br/>

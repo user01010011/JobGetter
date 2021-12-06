@@ -239,6 +239,13 @@
     position: fixed;
   }
 
+    .contact-form {
+      /* border: 1px solid;  */
+      /* display: inline-block; */
+      vertical-align: top; 
+      background: white
+    }
+
   /* Fonts: */
 
   body, p, ol, ul, td {
@@ -300,6 +307,11 @@
 
   td {
     padding: 0 5px 7px; 
+  }
+
+  textarea {
+    /* vertical-align: top; */
+    vertical-align: middle;
   }
 
   div.field,
