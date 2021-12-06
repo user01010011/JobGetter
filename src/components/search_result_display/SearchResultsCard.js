@@ -3,12 +3,12 @@ import React from "react";
 const SearchResultsCard = (props) => {
     return (
         <div className="col content has-background-light" id="display-results-card" key={props.id} >
-            <ul>
+            <ul class="job-list" id="job-list">
                 <br/>
                 <h4>{props.job.job_title}</h4>
                 <li>Company: {props.job.company}</li>
                 <li>Location: {props.job.job_location}</li>
-                <li>Estimated Salaray: {props.job.est_salary}</li>
+                <li>Est. Salaray: {props.job.est_salary}</li>
                 <li><a href={props.job.job_url}>Click Here to Apply</a></li>
                 {/* <button className="view-btn button is-primary" onClick={props.show}>View</button> */}
                 <button className="favorite-btn button is-primary" onClick={props.save}>Favorite</button>

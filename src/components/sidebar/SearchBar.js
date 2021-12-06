@@ -47,12 +47,12 @@ class SearchBar extends Component {
                     <br/>
                     <label className="label"><h4>Job Title Search: </h4></label>
                     <div className="control">
-                        <input className="input" type="text" name="job_title" placeholder="Input Job Title" value={this.state.job_title} onChange={this.handleOnChange} />
+                        <input className="input" type="text" name="job_title" placeholder="Enter Job Title" value={this.state.job_title} onChange={this.handleOnChange} />
                     </div>
                     <br/>
                     <label className="label"><h4>Company Search: </h4></label>
                     <div className="control">
-                        <input className="input" type="text" name="company" placeholder="Input Company" value={this.state.company} onChange={this.handleOnChange} />
+                        <input className="input" type="text" name="company" placeholder="Enter Company Name" value={this.state.company} onChange={this.handleOnChange} />
                     </div>
                     <br/>
                     <label className="label"><h4>Location Search: </h4></label>
