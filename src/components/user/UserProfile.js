@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import { userLogIn } from '../../redux/actions/UserAuthentication'; 
 
-import FavoritesBar from '../sidebar/FavoritesBar';
+import FavoritesBar from '../centerbar/FavoritesBar';
 
 class Profile extends Component {
     state = {

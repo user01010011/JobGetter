@@ -17,7 +17,7 @@ const NavBar = (props) => {
                 <nav className="navbar-buttons navbar-start pt-1" >
                     <button className="button is-primary" id="home" name="/" onClick={routeChange}>Home</button>
                     <button className="button is-info" id="about" name="/about" onClick={routeChange}>About</button>
-                    <button className="button is-success" id="contact" name="/contact" onClick={routeChange}>Contact</button>
+                    <button className="button is-success" id="contact-us" name="/contact-us" onClick={routeChange}>Contact Us</button>
                 </nav>
                 <nav className="error-message navbar-end pt-3" style={{ color:"red" }}>
                     {props.errorMessage}

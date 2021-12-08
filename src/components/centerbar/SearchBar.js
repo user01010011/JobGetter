@@ -58,15 +58,18 @@ class SearchBar extends Component {
                     <label className="label"><h4>Location Search: </h4></label>
                     <div className="control">
                         <select name="location" value={this.state.job_location} onChange={this.handleOnChange}>
-                            <option value="n/a">None</option>
+                            <option value="all">ALL</option>
                             <option value="r">Remote</option> 
                             <option value="ny">New York, NY</option>
                             <option value="sf">San Francisco, CA</option>
                             <option value="mv">Mountain View, CA</option>
                             <option value="pa">Palo Alto, CA</option>
                             <option value="cu">Cupertino, CA</option>
+                            <option value="la">Los Angelos, CA</option>
+                            <option value="se">Seattle, WA</option>
+                            <option value="ch">Chicago, IL</option>
+                            <option value="bo">Boston, MA</option>
                             <option value="au">Austin, TX</option>
-                            <option value="cu">Seattle, WA</option>
                         </select>
                     </div>
                     <br/>

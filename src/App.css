@@ -203,7 +203,6 @@
     padding-right: 10px; 
   }
 
-
   /* UserHomeContainer.css */
   #display-container {
     display: flex;
@@ -218,7 +217,6 @@
     display: flex;
     flex-direction: column;
   }
-
 
   /* FavoritesBar.css for FavoritesBar.js */
   .favorites-bar {
@@ -241,6 +239,8 @@
 
   .contact {
     position: center;
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-form {

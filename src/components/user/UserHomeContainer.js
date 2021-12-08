@@ -1,10 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import SideBarContainer from "../sidebar/SideBarContainer";
-import SearchBar from "../sidebar/SearchBar";
+import SideBarContainer from "../centerbar/SideBarContainer";
+import SearchBar from "../centerbar/SearchBar";
 import SearchResults from "../search_result_display/SearchResults";
-import UserProfile from "./UserProfile";
+// import UserProfile from "./UserProfile";
 
 const UserHomeContainer = () => {
     return (
