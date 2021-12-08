@@ -243,15 +243,6 @@
     flex-direction: column;
   }
 
-  .contact-form {
-    /* border: 1px solid;  */
-    /* display: inline-block; */
-    vertical-align: top; 
-    /* vertical-align: middle; 
-    vertical-align: bottom;  */
-    background: white;
-  }
-
   ul.job-list {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */
