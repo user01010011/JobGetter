@@ -15,7 +15,7 @@ const NavBar = (props) => {
         <div>
             <nav className="navbar is-fixed-top is-warning">
                 <nav className="navbar-buttons navbar-start pt-1" >
-                    <button className="button is-primary" id="home" name="/" onClick={routeChange}>Home</button>
+                    <button className="button is-primary" id="home" name="/" onClick={routeChange}>Job Getter</button>
                     <button className="button is-info" id="about" name="/about" onClick={routeChange}>About</button>
                     <button className="button is-success" id="contact" name="/contact" onClick={routeChange}>Contact Us</button>
                 </nav>
