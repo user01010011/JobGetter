@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import FavoritesCard from "./FavoritesCard";
 // import { getFavorites, deleteFavorites } from "../../redux/actions/Favorites";
-import { showFavorites, deleteFavorites } from "../../redux/actions/Favorites";
+import { showFavorites, clearFavorites } from "../../redux/actions/Favorites";
 
 
 class FavoritesBar extends Component {
@@ -14,6 +14,7 @@ class FavoritesBar extends Component {
         return (
             <div>
                 <h3>Your Favorite Jobs ❤️: </h3>
+                <button className="button is-warning" id="sort" onClick={this.handleOnClick}>Sort Favorites</button>
                 {this.props.favorites.map((job, i) => 
                     <FavoritesCard 
                         job={job} 
@@ -38,4 +39,4 @@ const mapStateToProps = state => {
 }
 
 // export default connect(mapStateToProps, { getFavorites, deleteFavorites })(FavoritesBar);
-export default connect(mapStateToProps, { showFavorites, deleteFavorites })(FavoritesBar);
+export default connect(mapStateToProps, { showFavorites, clearFavorites })(FavoritesBar);

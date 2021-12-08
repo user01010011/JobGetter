@@ -10,8 +10,8 @@ const FavoritesCard = (props) => {
                 <li>Compnay: <strong>{props.company}</strong></li>
                 <li>Location: <strong>{props.job_location}</strong></li>
                 <li><a href={props.job_url} target="_blank">Apply</a></li>
-                <button className="delete-btn button is-small is-danger" onClick={props.delete}>X</button>
-                {/* <button className="delete-btn button is-small is-danger" onClick={props.clear}>X</button> */}
+                {/* <button className="delete-btn button is-small is-danger" onClick={props.delete}>X</button> */}
+                <button className="delete-btn button is-small is-danger" onClick={props.clear}>X</button>
                 <button className="button is-small is-primary" onClick={() => setLikes(likes + 1)}>♥︎</button>
                 {likes}
             </ul>

@@ -41,6 +41,7 @@ class Profile extends Component {
                     </div>
                     <button className="edit-profile" id="edit-profile" onClick={this.handleEditProfile}>Edit Profile</button>
                 </div> 
+                <br/>
                 <div>
                     <FavoritesBar />
                 </div> 
