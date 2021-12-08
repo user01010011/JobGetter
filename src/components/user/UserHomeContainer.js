@@ -5,10 +5,12 @@ import SideBarContainer from "../centerbar/SideBarContainer";
 import SearchBar from "../centerbar/SearchBar";
 import SearchResults from "../search_result_display/SearchResults";
 // import UserProfile from "./UserProfile";
+import UserMenu from "../sidebar/UserMenu";
 
 const UserHomeContainer = () => {
     return (
         <div className="column-home-container" id="user-home">
+            <UserMenu />
             <SideBarContainer />
             <SearchBar />
             <SearchResults />
