@@ -31,6 +31,10 @@ class Profile extends Component {
                 </div>
                 <div>
                     <h4>Welcome, Shasha!</h4>
+                    <div style={{display: "flex", justifyContent:"space-between", width:"108%"}}>
+                        <h6>Favorites </h6><br/><br/>
+                        <h6>Applied </h6>
+                    </div>
                     <button className="edit-profile" id="edit-profile" onClick={this.handleEditProfile}>Edit Profile</button>
                     <h4>What jobs have you applied to today?</h4>
                 </div>  
