@@ -16,7 +16,6 @@ const UserHomeContainer = () => {
                 </Route>
                 </Switch>
             </Router>
-            <UserProfile />
             <SideBarContainer />
             <SearchResults />
         </div>
