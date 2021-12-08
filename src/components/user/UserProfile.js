@@ -30,13 +30,14 @@ class Profile extends Component {
                     <button className="edit-photo" id="edit-photo" onClick={this.handleChangePhoto}>Change Photo</button>
                 </div>
                 <div>
-                    <h4>Welcome, Shasha!</h4>
-                    <div style={{display: "flex", justifyContent:"space-between", width:"108%"}}>
-                        <h6>Favorites </h6><br/><br/>
-                        <h6>Applied </h6>
+                    <h4>Welcome, Shasha!</h4> 
+                    <h4>Did you applied to your favorite jobs today?</h4>
+                    <br/>
+                    <div style={{display: "flex", justifyContent:"space-between", width:"50%"}}>
+                        <h5>Favorites </h5>
+                        <h5>Applied </h5>
                     </div>
                     <button className="edit-profile" id="edit-profile" onClick={this.handleEditProfile}>Edit Profile</button>
-                    <h4>What jobs have you applied to today?</h4>
                 </div>  
             </div>
         )
