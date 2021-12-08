@@ -7,6 +7,7 @@ const SearchResultsCard = (props) => {
             <ul class="job-list" id="job-list">
                 <br/>
                 <h4>{props.job.job_title}</h4>
+                <li><small>Job id: {props.id}</small></li>
                 <li>Company: {props.job.company}</li>
                 <li>Location: {props.job.job_location}</li>
                 <li>Est. Salaray: {props.job.est_salary}</li>
