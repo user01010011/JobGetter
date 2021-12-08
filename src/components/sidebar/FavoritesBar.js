@@ -13,7 +13,7 @@ class FavoritesBar extends Component {
     render() {
         return (
             <div>
-                <h3>Favorite Jobs: </h3>
+                <h3>Your Favorite Jobs ❤️: </h3>
                 {this.props.favorites.map((job, i) => 
                     <FavoritesCard 
                         job={job} 

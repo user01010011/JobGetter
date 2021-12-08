@@ -13,7 +13,7 @@ const SearchResultsCard = (props) => {
                 <li><a href={props.job.job_url} >APPLY</a></li>
                 {/* <button className="view-btn button is-primary" onClick={props.show}>View</button> */}
                 <button className="favorite-btn button is-primary" onClick={props.save}>Favorite</button>
-                <button className="button is-small is-primary" onClick={() => setLikes(likes + 1)}>♥︎</button>
+                <button className="button is-small is-primary" onClick={() => setLikes(likes + 1)}>❤️</button>
                 {likes}
                 <br/>
             </ul>
