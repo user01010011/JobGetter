@@ -1,6 +1,8 @@
 import React, { Component } from 'react'; 
 import { userLogIn } from '../../redux/actions/UserAuthentication'; 
 
+import FavoritesBar from '../sidebar/FavoritesBar';
+
 class Profile extends Component {
     state = {
         username: "", 
@@ -38,7 +40,10 @@ class Profile extends Component {
                         <h5>Applied </h5>
                     </div>
                     <button className="edit-profile" id="edit-profile" onClick={this.handleEditProfile}>Edit Profile</button>
-                </div>  
+                </div> 
+                <div>
+                    <FavoritesBar />
+                </div> 
             </div>
         )
     }
