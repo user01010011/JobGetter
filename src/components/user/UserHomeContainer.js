@@ -8,14 +8,6 @@ import UserProfile from "./UserProfile";
 const UserHomeContainer = () => {
     return (
         <div className="column-home-container" id="user-home">
-            <Router>
-                <Switch>
-                    <Route path="/profile" component={UserProfile} />
-                    {/* <Route path="/favorites" component={FavoritesBar} /> */}
-                    <Route>
-                </Route>
-                </Switch>
-            </Router>
             <SideBarContainer />
             <SearchResults />
         </div>
