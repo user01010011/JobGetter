@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 
 const SearchResultsCard = (props) => {
+    const [likes, setLikes] = useState(0) // [0, f(){}]
     return (
         <div className="col content has-background-light" id="display-results-card" key={props.id} >
             <ul class="job-list" id="job-list">
@@ -9,9 +10,11 @@ const SearchResultsCard = (props) => {
                 <li>Company: {props.job.company}</li>
                 <li>Location: {props.job.job_location}</li>
                 <li>Est. Salaray: {props.job.est_salary}</li>
-                <li><a href={props.job.job_url}>Click Here to Apply</a></li>
+                <li><a href={props.job.job_url} >APPLY</a></li>
                 {/* <button className="view-btn button is-primary" onClick={props.show}>View</button> */}
                 <button className="favorite-btn button is-primary" onClick={props.save}>Favorite</button>
+                <button className="button is-small is-primary" onClick={() => setLikes(likes + 1)}>♥︎</button>
+                {likes}
                 <br/>
             </ul>
         </div>
