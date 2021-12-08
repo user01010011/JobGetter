@@ -4,6 +4,16 @@ class UserMenu extends Component {
     render() {
         return (
             <div className="col sidebar-user-menu">
+                <div className="company-sidebar-display">
+                <a href="/home" role="button" id="home-tab" className="home-tab">
+                        <div class="home-logo">
+                        </div>
+                        <div>
+                            <div class="menu-item">Job Getter</div>
+                        </div>
+                    </a>
+                </div>
+                <br/>
                 <div class="user-profile">
                     <a href="/profile" role="button" id="profile-tab" className="profile-tab">
                         <div class="profile-logo">
@@ -40,7 +50,7 @@ class UserMenu extends Component {
                         </div>
                     </a>
                 </div>
-                <div class="user-forum">
+                {/* <div class="user-forum">
                     <a href="user-forum" role="button" id="user-forum-tab" className="user-forum-tab">
                         <div class="user-forum-logo">
                         </div>
@@ -48,7 +58,7 @@ class UserMenu extends Component {
                             <div class="menu-item">Forum</div>
                         </div>
                     </a>
-                </div>
+                </div> */}
             </div>
         )
     }
