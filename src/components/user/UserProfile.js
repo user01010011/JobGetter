@@ -6,6 +6,13 @@ import FavoritesBar from '../centerbar/FavoritesBar';
 class Profile extends Component {
     state = {
         username: "", 
+        password: "",
+        first_name: "",
+        last_name: "", 
+        email: "",
+        phone_number: "",
+        avatar: "",
+        bio: "",
     }
 
     handleOnChange = (event) => {
@@ -30,7 +37,6 @@ class Profile extends Component {
                     src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" 
                     /><br/>
                     <button className="edit-photo" id="edit-photo" onClick={this.handleChangePhoto}>Change Photo</button>
-                    <p>Bio: </p>
                 </div>
                 <div>
                     <h4>Welcome, Shasha!</h4> 
