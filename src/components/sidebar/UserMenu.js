@@ -16,13 +16,32 @@ class UserMenu extends Component {
                 <br/>
                 <div class="user-profile">
                     <a href="/profile" role="button" id="profile-tab" className="profile-tab">
+                        <div class="profile-photo-username" id="profile-photo-username">
+                            <img style={{width: "50px", height:"50px", borderRadius:"50px"}} alt=""
+                            src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" 
+                            />
+                            <h5>Username</h5>
+                        </div>
+                    </a>
+                </div><br/>
+                <div class="user-profile">
+                    <a href="/profile" role="button" id="profile-tab" className="profile-tab">
                         <div class="profile-logo">
                         </div>
                         <div>
                             <div class="menu-item">Profile</div>
                         </div>
                     </a>
-                </div>
+                </div><br/>
+                <div class="user-resume">
+                    <a href="/resume" role="button" id="resume-tab" className="resume-tab">
+                        <div class="resume-logo">
+                        </div>
+                        <div>
+                            <div class="menu-item">Resume</div>
+                        </div>
+                    </a>
+                </div><br/>
                 <div class="user-dashboard">
                     <a href="/dashboard" role="button" id="dashboard-tab" className="dashboard-tab">
                         <div class="dashboard-logo">
@@ -31,7 +50,7 @@ class UserMenu extends Component {
                             <div class="menu-item">Dashboard</div>
                         </div>
                     </a>
-                </div>
+                </div><br/>
                 <div class="user-jobs">
                     <a href="user-jobs" role="button" id="user-jobs-tab" className="user-jobs-tab">
                         <div class="user-jobs-logo">
@@ -40,7 +59,7 @@ class UserMenu extends Component {
                             <div class="menu-item">My Jobs Tracker</div>
                         </div>
                     </a>
-                </div>
+                </div><br/>
                 <div class="user-companies">
                     <a href="user-companies" role="button" id="user-companies-tab" className="user-companies-tab">
                         <div class="user-companies-logo">
