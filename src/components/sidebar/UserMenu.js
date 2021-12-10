@@ -14,7 +14,7 @@ class UserMenu extends Component {
                     </a>
                 </div>
                 <br/>
-                <div class="user-profile">
+                <div class="user-avatar">
                     <a href="/profile" role="button" id="profile-tab" className="profile-tab">
                         <div class="profile-photo-username" id="profile-photo-username">
                             <img style={{width: "50px", height:"50px", borderRadius:"50px"}} alt=""
@@ -25,7 +25,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div class="user-profile">
-                    <a href="/profile" role="button" id="profile-tab" className="profile-tab">
+                    <a href="/profile" role="button" id="profile-tab" className="profile-tab" onClick={this.handleGoToProfile}>
                         <div class="profile-logo">
                         </div>
                         <div>
@@ -34,7 +34,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div class="user-resume">
-                    <a href="/resume" role="button" id="resume-tab" className="resume-tab">
+                    <a href="/resume" role="button" id="resume-tab" className="resume-tab" onClick={this.handleGoToResume}>
                         <div class="resume-logo">
                         </div>
                         <div>
@@ -43,7 +43,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div class="user-dashboard">
-                    <a href="/dashboard" role="button" id="dashboard-tab" className="dashboard-tab">
+                    <a href="/dashboard" role="button" id="dashboard-tab" className="dashboard-tab" onClick={this.handleGoToDashboard}>
                         <div class="dashboard-logo">
                         </div>
                         <div>
@@ -52,7 +52,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div class="user-jobs">
-                    <a href="user-jobs" role="button" id="user-jobs-tab" className="user-jobs-tab">
+                    <a href="user-jobs" role="button" id="user-jobs-tab" className="user-jobs-tab" onClick={this.handleGoToUserJobs}>
                         <div class="user-jobs-logo">
                         </div>
                         <div>
@@ -61,7 +61,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div class="user-companies">
-                    <a href="user-companies" role="button" id="user-companies-tab" className="user-companies-tab">
+                    <a href="user-companies" role="button" id="user-companies-tab" className="user-companies-tab" onClick={this.handleGoToUserCompanies}>
                         <div class="user-companies-logo">
                         </div>
                         <div>

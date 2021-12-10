@@ -1,5 +1,7 @@
 import React, { Component } from 'react'; 
 // import { userLogIn } from '../../redux/actions/UserAuthentication'; 
+import UserResume from "./UserResume";
+
 
 import FavoritesBar from '../centerbar/FavoritesBar';
 
@@ -68,6 +70,7 @@ class Profile extends Component {
                 </div> 
                 <br/>
                 <div>
+                    <UserResume />
                     <FavoritesBar />
                 </div> 
             </div>
