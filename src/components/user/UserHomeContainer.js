@@ -11,7 +11,7 @@ const UserHomeContainer = () => {
     return (
         <div className="column-home-container" id="user-home">
             <UserMenu />
-            {/* <SideBarContainer /> */}
+            <SideBarContainer />
             <SearchBar />
             <SearchResults />
         </div>
