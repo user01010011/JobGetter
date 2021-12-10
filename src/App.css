@@ -129,6 +129,12 @@
     /* justify-content: flex-end; */
   }
 
+  .button-is-link {
+    /* justify-content: right; */
+    display: flex;
+    justify-content: flex-end;
+  }
+
   button {
     font: roboto;
     font-size: 16px;
@@ -238,7 +244,6 @@
   }
 
   .contact {
-    position: center;
     display: flex;
     flex-direction: column;
   }

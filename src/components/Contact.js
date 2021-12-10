@@ -32,7 +32,7 @@ class Contact extends Component {
 
     render() {
         return (
-        <div className="contact-form has-text-white has-text-centered" id="contact-form" style={{position: "fixed", top: "180px"}}>
+        <div className="contact" id="contact" style={{position: "fixed", top: "180px"}}>
             <h2>Contact Us 💌 </h2>
             <br/>
             <form onSubmit={this.handleOnSubmit}>
@@ -50,7 +50,9 @@ class Contact extends Component {
                 placeholder="Enter your message..." value={this.state.message} onChange={this.handleOnChange}></textarea>
                 <br/>
                 <br/>
-                <button className="button is-link" type="submit" onClick={this.handleOnSubmit}>Send!</button>
+                <span className="contact-button">
+                    <button type="submit" className="button is-link" onClick={this.handleOnSubmit}>Send!</button>
+                </span>
             </form>
         </div>
     )}

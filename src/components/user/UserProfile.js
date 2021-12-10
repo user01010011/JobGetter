@@ -1,5 +1,5 @@
 import React, { Component } from 'react'; 
-import { userLogIn } from '../../redux/actions/UserAuthentication'; 
+// import { userLogIn } from '../../redux/actions/UserAuthentication'; 
 
 import FavoritesBar from '../centerbar/FavoritesBar';
 
@@ -26,10 +26,11 @@ class Profile extends Component {
         return (
             <div className="profile-container" id="profile-container">
                 <div>
-                    <img style={{width: "160px", height:"160px", borderRadius:"80px"}}
+                    <img style={{width: "160px", height:"160px", borderRadius:"80px"}} alt=""
                     src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" 
                     /><br/>
                     <button className="edit-photo" id="edit-photo" onClick={this.handleChangePhoto}>Change Photo</button>
+                    <p>Bio: </p>
                 </div>
                 <div>
                     <h4>Welcome, Shasha!</h4> 
