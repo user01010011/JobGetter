@@ -37,6 +37,7 @@ class SearchBar extends Component {
             this.props.sortFavorites();
             // this.props.sortSearch();
         }
+
     }
 
     render() {

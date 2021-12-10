@@ -7,10 +7,9 @@ const SearchResults = (props) => {
     return (
         <div className="col search-results" id="display-results-container">
             <h3>Search Results: </h3>
-            <div className="sort-filter-search">
+            <div className="sort-filter-search" style={{display:"flex", justifyContent:"space-between"}}>
                 <button id='sort-results' class="btn btn-block" type="submit" name="sort-results" value="Sort by Date Posted">Sort by Date Posted </button>
-                <br/><br/>
-                <label id="filter-by-category">Filter by Job Level 🗂: </label>
+                <label id="filter-by-category">Filter by 🗂: </label>
                 <select type="select" id="filter-title" name="filterTitle">
                     <option value="All Levels">All Levels</option>
                     <option value="Junior">Junior</option>
@@ -18,10 +17,8 @@ const SearchResults = (props) => {
                     <option value="Senior">Senior</option>
                     <option value="Executive">Executive</option>
                 </select>
-                <br/><br/>
-                <label id="search-by-keyword">Search by Keyword 🔎: </label>
+                <label id="search-by-keyword">Search by 🔎: </label>
                 <input id="search-input" type="text" name="keyword" placeholder="Enter keyword..."/>
-                <br/><br/>
             </div>
             {(props.searchResults.length !== 0) ? (
                 props.searchResults.map((job, i) => 
