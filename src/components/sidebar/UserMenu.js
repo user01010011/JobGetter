@@ -1,6 +1,7 @@
 import React, { Component } from "react"; 
 
 class UserMenu extends Component {
+
     render() {
         return (
             <div className="col sidebar-user-menu">
@@ -51,12 +52,21 @@ class UserMenu extends Component {
                         </div>
                     </a>
                 </div><br/>
-                <div class="user-jobs">
-                    <a href="user-jobs" role="button" id="user-jobs-tab" className="user-jobs-tab" onClick={this.handleGoToUserJobs}>
-                        <div class="user-jobs-logo">
+                <div class="user-favorite-jobs">
+                    <a href="user-favorite-jobs" role="button" id="user-favorite-jobs-tab" className="user-favorite-jobs-tab" onClick={this.handleGoToUserFavoriteJobs}>
+                        <div class="user-favorite-jobs-logo">
                         </div>
                         <div>
-                            <div class="menu-item">My Jobs Tracker</div>
+                            <div class="menu-item">My Favorite Jobs</div>
+                        </div>
+                    </a>
+                </div><br/>
+                <div class="user-applied-jobs">
+                    <a href="user-applied-jobs" role="button" id="user-applied-jobs-tab" className="user-applied-jobs-tab" onClick={this.handleGoToUserAppliedJobs}>
+                        <div class="user-applied-jobs-logo">
+                        </div>
+                        <div>
+                            <div class="menu-item">My Applied Jobs</div>
                         </div>
                     </a>
                 </div><br/>

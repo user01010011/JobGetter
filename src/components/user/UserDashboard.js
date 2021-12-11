@@ -10,6 +10,7 @@ class Dashboard extends Component {
                 // add overall #s & compare with other job seekers 
                 // add to do list
                 // add notifications from companies
+                // congratulation message if the user had received a job offer 
             </div>
         )
     }
