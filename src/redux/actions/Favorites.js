@@ -1,62 +1,62 @@
 const BASE_URL = "http://localhost:3000/users"
 
 export const saveFavorites = (jobData, currentUser) => {
-    const URL = BASE_URL + `/${currentUser.id}/jobs/${jobData.id}`;
+    // const URL = BASE_URL + `/${currentUser.id}/jobs/${jobData.id}`;
+    const URL = BASE_URL + `/${currentUser.id}/jobs`;
     console.log("You just clicked Favorite button!")
-        return (
-            dispatch =>
-            fetch(URL)
-                .then(res => res.json())
-                .then(data => {
+        // return (
+        //     dispatch =>
+        //     fetch(URL)
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             dispatch({
+        //                 type: "SAVE_FAVORITES",
+        //                 payload: data
+        //             })
+        //         })
+        // );
+
+    return (
+        dispatch => {
+            fetch(URL, {
+                method:"POST",
+                headers:{
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({ 
+                    job: {
+                        job_title: jobData.JobTitle,
+                        company: jobData.Company,
+                        job_location: jobData.JobLocation,
+                        est_salary: jobData.EstSalary,
+                        job_url: jobData.JobUrl,
+                        min_reqs: jobData.MinReqs,
+                        preferred_reqs: jobData.PreferredReqs,
+                        responsibilities: jobData.Responsibilities
+                    }   
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status >= 400){
                     dispatch({
-                        type: "SAVE_FAVORITES",
+                        type: "DO_NOT_SAVE_FAVORITE",
                         payload: data
                     })
-                })
-        );
-    }
-    // );
-
-    // return (
-    //     dispatch => {
-    //         fetch(URL, {
-    //             method:"GET",
-    //             headers:{
-    //                 "Content-Type": "application/json",
-    //                 "Accept": "application/json"
-    //             },
-    //             body: JSON.stringify({ 
-    //                 job: {
-    //                     job_title: jobData.JobTitle,
-    //                     company: jobData.Company,
-    //                     job_location: jobData.JobLocation,
-    //                     est_salary: jobData.EstSalary,
-    //                     job_url: jobData.JobUrl,
-    //                     min_reqs: jobData.MinReqs,
-    //                     preferred_reqs: jobData.preferred_reqs,
-    //                     responsibilities: jobData.responsibilities
-    //                 }   
-    //             })
-    //         })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.status >= 400){
-    //                 dispatch({
-    //                     type: "DO_NOT_SAVE_FAVORITE",
-    //                     payload: data
-    //                 })
-    //             }
-    //             else {    
-    //                 dispatch({
-    //                     type: "SAVE_FAVORITE",
-    //                     payload: {
-    //                         favorite: data
-    //                     }
-    //                 })
-    //             }
-    //         })
-    //     }
-    // );
+                }
+                else {    
+                    dispatch({
+                        type: "SAVE_FAVORITE",
+                        payload: {
+                            favorite: data
+                        }
+                    })
+                }
+            })
+        }
+    );
+ }
 
 
 export const showFavorites = () => {

@@ -23,13 +23,18 @@ class Profile extends Component {
         });
     }; 
 
+    handleChangePhoto = (event) => {
+        console.log("you clicked change photo!")
+    }
+
     handleEditProfile = (event) => {
         console.log("you clicked edit profile!")
     }
 
-    handleChangePhoto = (event) => {
-        console.log("you clicked change photo!")
+    handleSaveProfile = (event) => {
+        console.log("you clicked save profile!")
     }
+
 
     render() {
         return (
@@ -51,6 +56,24 @@ class Profile extends Component {
                     </div>
                     <br/><br/>
                     <div className="profile-info" id="profile-info">
+                        <div className="user-profile-info">
+                        <label className="profile-username" id="profile-username">Username: </label>
+                        <label className="user-username" type="text" name="user-username" value={this.state.username}/><br/><br/>
+                        <label className="profile-password" id="profile-password">Password: </label>
+                        <label className="user-password" type="text" name="user-password" value={this.state.password}/><br/><br/>
+                        <label className="profile-bio" id="profile-bio" onClick={this.handleChangeBio}>Bio: </label>
+                        <label className="user-bio" type="text" name="user-bio" value={this.state.bio}/><br/><br/>
+                        <label className="profile-frst-name" id="profile-frst-name">First Name: </label>
+                        <label className="user-first-name" type="text" name="user-first-name" value={this.state.first_name}/><br/><br/>
+                        <label className="profile-last-name" id="profile-last-name" onClick={this.handleChangeLastName}>Last Name: </label>
+                        <label className="user-last-name" type="text" name="user-last-name" value={this.state.last_name}/><br/><br/>   
+                        <label className="profile-email" id="profile-email" onClick={this.handleEditEmail}>Email: </label>
+                        <label className="user-email" type="text" name="user-email" value={this.state.email} /><br/><br/>
+                        <label className="profile-phone" id="profile-phone" onClick={this.handleChangePhone}>Phone Number: </label>
+                        <label className="user-phone" type="text" name="user-phone" value={this.state.phone_number}/><br/><br/>
+                        <button className="edit-profile" id="edit-profile" onClick={this.handleEditProfile}>Edit Profile</button>
+                        </div><br/>
+                    <form>
                         <label className="profile-username" id="profile-username">Username: </label>
                         <input className="input-username" type="text" name="input-username" value={this.state.username} onChange={this.handleChangeUsername}/><br/><br/>
                         <label className="profile-password" id="profile-password">Password: </label>
@@ -65,7 +88,9 @@ class Profile extends Component {
                         <input className="input-email" type="text" name="input-email" value={this.state.email} onChange={this.handleChangeEmail}/><br/><br/>
                         <label className="profile-phone" id="profile-phone" onClick={this.handleChangePhone}>Phone Number: </label>
                         <input className="input-phone" type="text" name="input-phone" value={this.state.phone_number} onChange={this.handleChangePhone}/><br/><br/>
-                        <button className="Update-profile" id="Update-profile" onClick={this.handleChangeProfile}>Update Profile</button>
+                        <button className="save-profile" id="save-profile" onClick={this.handleSaveProfile}>Save Profile</button>
+                    </form>
+
                     </div>
                 </div> 
                 <br/>

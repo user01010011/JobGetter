@@ -43,7 +43,7 @@ class UserMenu extends Component {
                         </div>
                     </a>
                 </div><br/>
-                <div class="user-dashboard">
+                <div className="user-dashboard">
                     <a href="/dashboard" role="button" id="dashboard-tab" className="dashboard-tab" onClick={this.handleGoToDashboard}>
                         <div class="dashboard-logo">
                         </div>
@@ -52,7 +52,16 @@ class UserMenu extends Component {
                         </div>
                     </a>
                 </div><br/>
-                <div class="user-favorite-jobs">
+                <div className="user-applied-jobs">
+                    <a href="user-applied-jobs" role="button" id="user-applied-jobs-tab" className="user-applied-jobs-tab" onClick={this.handleGoToUserAppliedJobs}>
+                        <div class="user-applied-jobs-logo">
+                        </div>
+                        <div>
+                            <div class="menu-item">Job Application Tracker</div>
+                        </div>
+                    </a>
+                </div><br/>
+                <div className="user-favorite-jobs">
                     <a href="user-favorite-jobs" role="button" id="user-favorite-jobs-tab" className="user-favorite-jobs-tab" onClick={this.handleGoToUserFavoriteJobs}>
                         <div class="user-favorite-jobs-logo">
                         </div>
@@ -61,16 +70,7 @@ class UserMenu extends Component {
                         </div>
                     </a>
                 </div><br/>
-                <div class="user-applied-jobs">
-                    <a href="user-applied-jobs" role="button" id="user-applied-jobs-tab" className="user-applied-jobs-tab" onClick={this.handleGoToUserAppliedJobs}>
-                        <div class="user-applied-jobs-logo">
-                        </div>
-                        <div>
-                            <div class="menu-item">My Applied Jobs</div>
-                        </div>
-                    </a>
-                </div><br/>
-                <div class="user-companies">
+                <div className="user-companies">
                     <a href="user-companies" role="button" id="user-companies-tab" className="user-companies-tab" onClick={this.handleGoToUserCompanies}>
                         <div class="user-companies-logo">
                         </div>
