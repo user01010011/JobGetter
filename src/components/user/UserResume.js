@@ -50,7 +50,7 @@ class Resume extends Component {
                     <h4>My professional links</h4><br/>
                     <div className="user-linkedin" id="user-linkedin">
                         <label class="linkedin-label">Linkedin: </label>
-                        <input class="linkedin-input" name="linkedin" placeholder="URL or Username" onChange={this.handleChangeLinkedin}></input>
+                        <input class="linkedin-input" name="linkedin" placeholder="URL or Username"  onChange={this.handleChangeLinkedin}></input>
                     </div><br/>
                     <div className="user-github" id="user-github">
                         <label class="github-label">Github: </label>
