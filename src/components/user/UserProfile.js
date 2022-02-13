@@ -5,7 +5,7 @@ import UserResume from "./UserResume";
 
 import FavoritesBar from '../centerbar/FavoritesBar';
 
-class Profile extends Component {
+class UserProfile extends Component {
     state = {
         username: "", 
         password: "",
@@ -139,4 +139,4 @@ class Profile extends Component {
 }
 
 
-export default Profile
+export default UserProfile

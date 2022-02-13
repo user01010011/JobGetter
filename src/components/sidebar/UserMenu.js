@@ -1,4 +1,10 @@
 import React, { Component } from "react"; 
+import { Route, Link } from "react-router-dom";
+import UserProfile from "../user/UserProfile";
+import UserDashboard from "../user/UserDashboard";
+import UserResume from "../user/UserResume";
+import UserJobs from "../user/UserJobs";
+import UserCompanies from "../user/UserCompanies";
 
 class UserMenu extends Component {
 
@@ -53,7 +59,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div className="user-applied-jobs">
-                    <a href="user-applied-jobs" role="button" id="user-applied-jobs-tab" className="user-applied-jobs-tab" onClick={this.handleGoToUserAppliedJobs}>
+                    <a href="/user-applied-jobs" role="button" id="user-applied-jobs-tab" className="user-applied-jobs-tab" onClick={this.handleGoToUserAppliedJobs}>
                         <div class="user-applied-jobs-logo">
                         </div>
                         <div>
@@ -61,7 +67,7 @@ class UserMenu extends Component {
                         </div>
                     </a>
                 </div><br/>
-                <div className="user-favorite-jobs">
+                <div className="/user-favorite-jobs">
                     <a href="user-favorite-jobs" role="button" id="user-favorite-jobs-tab" className="user-favorite-jobs-tab" onClick={this.handleGoToUserFavoriteJobs}>
                         <div class="user-favorite-jobs-logo">
                         </div>
@@ -71,7 +77,7 @@ class UserMenu extends Component {
                     </a>
                 </div><br/>
                 <div className="user-companies">
-                    <a href="user-companies" role="button" id="user-companies-tab" className="user-companies-tab" onClick={this.handleGoToUserCompanies}>
+                    <a href="/user-companies" role="button" id="user-companies-tab" className="user-companies-tab" onClick={this.handleGoToUserCompanies}>
                         <div class="user-companies-logo">
                         </div>
                         <div>

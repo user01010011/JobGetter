@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FavoritesBar from '../centerbar/FavoritesBar';
 
 class UserJobs extends Component {
     render() {

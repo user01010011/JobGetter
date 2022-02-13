@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Resume extends Component {
+class UserResume extends Component {
     state = {
         resume: "",
         linkedin: "",
@@ -71,4 +71,4 @@ class Resume extends Component {
     }
 }
 
-export default Resume
+export default UserResume
