@@ -1,6 +1,6 @@
 import React from "react";
-import SearchBar from '../centerbar/SearchBar';
-import SearchResults from '../search_result_display/SearchResults';
+import SearchBar from '../search/SearchBar';
+import SearchResults from '../search/SearchResults';
 import './Search.css';
 
 const UserSearch = () => {

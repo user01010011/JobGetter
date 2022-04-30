@@ -1,7 +1,7 @@
 import React from "react";
 // import React, { useState } from "react";
 
-const FavoritesCard = (props) => {
+const FavoriteJobCard = (props) => {
     // const [likes, setLikes] = useState(0) // [0, f(){}]
     return (
         <div className="favorites-card has-background-light" key={props.id} id={props.id}> 
@@ -27,4 +27,4 @@ const FavoritesCard = (props) => {
 
 }
 
-export default FavoritesCard;
+export default FavoriteJobCard;

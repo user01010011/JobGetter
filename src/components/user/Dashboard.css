@@ -1,0 +1,34 @@
+.dashboard {
+    padding: 2rem 0rem; 
+}
+.dashboard-header {
+    font-size: 20px; 
+    margin: 10px 0px; 
+}
+.dashboard-top {
+    margin: 20px 0px; 
+}
+.job-blocks {
+    display: flex; 
+    flex-direction: row;
+    margin: 10px 0px;  
+}
+.job-block {
+    display: flex; 
+    flex-direction: column; 
+    border: solid 2px #000; 
+    margin-right: 10px; 
+    padding: 10px; 
+    align-items: center; 
+    justify-content: center; 
+}
+.block-text {
+    font-size: 15px; 
+}
+.activity-chart-container {
+    border: solid 2px #000; 
+    width: 600px; 
+    height: 300px; 
+    /* align-items: center;  */
+    justify-content: center; 
+}

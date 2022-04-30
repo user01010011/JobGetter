@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import FavoritesBar from '../centerbar/FavoritesBar';
+import FavoriteJobs from '../favorite/FavoriteJobs';
+
+import './Job.css';
 
 class UserJobs extends Component {
     render() {
@@ -10,7 +12,7 @@ class UserJobs extends Component {
                 </div>
                 <div className="userjobs-favorites"> 
                     <h4>Favorite Jobs</h4>
-                    <FavoritesBar />
+                    <FavoriteJobs />
                 </div>
             </div>
         )

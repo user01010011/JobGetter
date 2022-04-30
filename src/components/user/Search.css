@@ -10,7 +10,6 @@
     /* flex-wrap: wrap; */
     flex-direction: column;
     /* justify-content: left; */
-    padding-right: 10px; 
   }
 .search-form {
     display: flex;
@@ -20,6 +19,7 @@
 .search-header {
     font-size: 20px; 
     margin: 10px 0px; 
+    padding: 0px; 
 }
 .search-form-item {
     margin: 10px 0px; 

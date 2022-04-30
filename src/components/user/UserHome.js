@@ -1,7 +1,7 @@
 import React from "react";
 import UserSearch from './UserSearch'; 
-import SearchBar from "../centerbar/SearchBar";
-import SearchResults from "../search_result_display/SearchResults";
+import SearchBar from "../search/SearchBar";
+import SearchResults from "../search/SearchResults";
 // import UserProfile from "./UserProfile";
 import Sidebar from "../sidebar/Sidebar";
 

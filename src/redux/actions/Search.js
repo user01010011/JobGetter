@@ -1,6 +1,5 @@
 // const BASE_URL = "http://localhost:3000/users"
 
-
 // export const searchQuery = (currentUser) => {
 export const searchQuery = (queries) => {
     const url = new URL("http://localhost:3000/search");

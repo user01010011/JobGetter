@@ -1,15 +1,11 @@
 import React, { Component } from "react";
+import './Company.css';
 
 class UserCompanies extends Component {
     render() {
         return (
-            <div className="user-companies-container">
-                <div className="user-companies">
-                    <h3>My Companies</h3>
-                </div>
-                <div className="user-favorite-companies">
-                    <h3>My Favorite Companies</h3>
-                </div>
+            <div className="usercompanies">
+                <h3 className="company-header">My Favorite Companies</h3>
             </div>
         )
     }

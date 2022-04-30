@@ -49,7 +49,7 @@ class Sidebar extends Component {
                             </Link>
                         </li>
                         <li className="sidebar-item">
-                            <Link className="sidebar-item-link">
+                            <Link to="/profile" className="sidebar-item-link">
                                 <MdSentimentVerySatisfied className="sidebar-item-icon"/>
                                 <span className="sidebar-item-text">My Profile</span>
                             </Link>
