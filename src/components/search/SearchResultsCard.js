@@ -6,7 +6,6 @@ const SearchResultsCard = (props) => {
     return (
         <div className="col content has-background-light" id="display-results-card" key={props.id} >
             <ul className="job-list" id="job-list">
-                <br/>
                 <h4>{props.job.job_title}</h4>
                 <li><small>Job id: {props.id}</small></li>
                 <li>Company: {props.job.job_company}</li>
@@ -22,7 +21,6 @@ const SearchResultsCard = (props) => {
                 <button className="favorite-btn button is-primary" onClick={props.save}>Favorite</button>
                 <button className="button is-small is-primary" onClick={() => setLikes(likes + 1)}>❤️</button>
                 {likes}
-                <br/>
             </ul>
         </div>
     )

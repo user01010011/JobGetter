@@ -1,11 +1,13 @@
 .userjobs {
     padding: 2rem 0rem; 
 }
-.header {
+.job-header {
     font-size: 20px; 
     margin: 10px 0px; 
 }
-
+.userjobs-block {
+    margin-bottom: 10px; 
+}
 ul.job-list {
     list-style-type: none; /* Remove bullets */
     padding: 0; /* Remove padding */

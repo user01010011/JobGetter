@@ -9,4 +9,15 @@
 }
 .auth-form {
     margin: 0rem; 
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+}
+.auth-label {
+    margin-top: 10px; 
+    margin-bottom: 2px; 
+}
+.auth-input {
+    font-size: 18px; 
+    height: 30px; 
 }
