@@ -1,0 +1,11 @@
+  /* FavoritesBar.css for FavoritesBar.js */
+  .favorites-bar {
+    background: #fff;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* float: right;  */
+    /* padding-left: 30px; */
+    /* position: right; */
+    padding-right: 10px; 
+  }

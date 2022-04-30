@@ -1,0 +1,17 @@
+ul.job-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
+
+ul.favorite-jobs-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+}
+
+#display-results-card {
+    display: flex;
+    flex-direction: column;
+}
+

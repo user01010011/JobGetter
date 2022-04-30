@@ -1,0 +1,55 @@
+.sidebar-menu {
+    display: flex; 
+    flex-direction: column;
+}
+.sidebar-top {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+.userprofile-container {
+    padding: 20px 0px; 
+}
+.userprofile-avatar {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50px; 
+}
+.userprofile-username {
+    color: #666666;
+}
+.sidebar-items {
+    list-style: none;
+    color: #000000; 
+}
+.sidebar-item {
+    padding: 10px 0px; 
+    font-size: 20px; 
+    color: #000000; 
+}
+.sidebar-item:hover {
+    cursor: pointer; 
+    color: #666666; 
+}
+.sidebar-item-link {
+    padding: 5px; 
+    display: flex; 
+    flex-direction: row; 
+    /* justify-content: center;  */
+    /* align-items: center;  */
+    vertical-align: center;
+}
+.sidebar-item-link:hover {
+    border: solid 2px #666;
+}
+.sidebar-item-icon {
+    font-size: 20px; 
+    margin-right: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    vertical-align: center;
+}
+.sidebar-item-text {
+    font-weight: 500; 
+}

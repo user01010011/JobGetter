@@ -8,7 +8,7 @@ const SearchResults = (props) => {
         <div className="col search-results" id="display-results-container">
             <h3>Search Results: </h3>
             <div className="sort-filter-search" style={{display:"flex", justifyContent:"space-between"}}>
-                <button id='sort-results' class="btn btn-block" type="submit" name="sort-results" value="Sort by Date Posted">Sort by Date Posted </button>
+                <button id='sort-results' className="btn btn-block" type="submit" name="sort-results" value="Sort by Date Posted">Sort by Date Posted </button>
                 <label id="filter-by-category">Filter by 🗂: </label>
                 <select type="select" id="filter-title" name="filterTitle">
                     <option value="All Levels">All Levels</option>

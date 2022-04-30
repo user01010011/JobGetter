@@ -25,27 +25,26 @@ class UserSignUp extends Component {
     }
     render() {
         return (
-            <div className="sign-up" style={{position: "fixed", top: "180px"}}>
-                <h2>Sign Up for Job Getter!</h2>
-                <br/>
-                <form onSubmit={this.handleOnSubmit}>
-                    <label className="label has-text-white"><strong>First Name: </strong></label>
-                    <input className="input" type="text" name="first_name" value={this.state.first_name} onChange={this.handleOnChange}/>
+            <div className="auth-container">
+                <h2 className="auth-header">Sign Up for Job Getter!</h2>
+                <form className="auth-form" onSubmit={this.handleOnSubmit}>
+                    <label className="auth-label"><strong>First Name: </strong></label>
+                    <input className="auth-input" type="text" name="first_name" value={this.state.first_name} onChange={this.handleOnChange}/>
                     <br/><br/>
-                    <label className="label has-text-white"><strong>Last Name: </strong></label>
-                    <input className="input" type="text" name="last_name" value={this.state.last_name} onChange={this.handleOnChange}/>
+                    <label className="auth-label"><strong>Last Name: </strong></label>
+                    <input className="auth-input" type="text" name="last_name" value={this.state.last_name} onChange={this.handleOnChange}/>
                     <br/><br/>
-                    <label className="label has-text-white"><strong>Email: </strong></label>
-                    <input className="input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
+                    <label className="auth-label"><strong>Email: </strong></label>
+                    <input className="auth-input" type="text" name="email" value={this.state.email} onChange={this.handleOnChange}/>
                     <br/><br/>
-                    <label className="label has-text-white"><strong>Username: </strong></label>
-                    <input className="input" type="text" name="username" value={this.state.username} onChange={this.handleOnChange}/>
+                    <label className="auth-label"><strong>Username: </strong></label>
+                    <input className="auth-input" type="text" name="username" value={this.state.username} onChange={this.handleOnChange}/>
                     <br/><br/>
-                    <label className="label has-text-white"><strong>Password: </strong></label>
-                    <input className="input" type="password" name="password" value={this.state.password} onChange={this.handleOnChange}/>
+                    <label className="auth-label"><strong>Password: </strong></label>
+                    <input className="auth-input" type="password" name="password" value={this.state.password} onChange={this.handleOnChange}/>
                     <br/>
                     <br/>
-                    <button className="button is-link" type="submit">Sign Up</button>
+                    <button className="auth-button" type="submit">Sign Up</button>
                 </form>
             </div>
         )

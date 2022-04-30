@@ -17,7 +17,7 @@ class JobCard extends Component {
     if(this.state.showDetails) {
       jobCardDetails = (
         <div className="card-details">
-          <div className="job-card-company">{this.props.company}</div>
+          <div className="job-card-company">{this.props.job_company}</div>
         </div>
       );
     };

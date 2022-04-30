@@ -1,8 +1,8 @@
 const BASE_URL = "http://localhost:3000/users"
 
-export const saveFavorites = (jobData, currentUser) => {
+export const saveFavorites = (favjobData, currentUser) => {
     // const URL = BASE_URL + `/${currentUser.id}/jobs/${jobData.id}`;
-    const URL = BASE_URL + `/${currentUser.id}/jobs`;
+    const URL = BASE_URL + `/${currentUser.id}/favjobs`;
     console.log("You just clicked Favorite button!")
         // return (
         //     dispatch =>
@@ -25,15 +25,17 @@ export const saveFavorites = (jobData, currentUser) => {
                     "Accept": "application/json"
                 },
                 body: JSON.stringify({ 
-                    job: {
-                        job_title: jobData.JobTitle,
-                        company: jobData.Company,
-                        job_location: jobData.JobLocation,
-                        est_salary: jobData.EstSalary,
-                        job_url: jobData.JobUrl,
-                        min_reqs: jobData.MinReqs,
-                        preferred_reqs: jobData.PreferredReqs,
-                        responsibilities: jobData.Responsibilities
+                    favjob: {
+                        job_title: favjobData.job_title,
+                        id: favjobData.id,
+                        job_company: favjobData.job_company,
+                        job_location: favjobData.job_location,
+                        est_salary: favjobData.est_salary,
+                        job_url: favjobData.job_url,
+                        min_reqs: favjobData.min_reqs,
+                        preferred_reqs: favjobData.preferred_reqs,
+                        responsibilities: favjobData.responsibilities,
+                        user_id:currentUser.id 
                     }   
                 })
             })
@@ -45,7 +47,8 @@ export const saveFavorites = (jobData, currentUser) => {
                         payload: data
                     })
                 }
-                else {    
+                else { 
+                    console.log("you got this far!")   
                     dispatch({
                         type: "SAVE_FAVORITE",
                         payload: {
@@ -69,7 +72,7 @@ export const showFavorites = () => {
 }
 
 export const getFavorites = currentUser => {
-    const URL = BASE_URL + `/${currentUser.id}/jobs`
+    const URL = BASE_URL + `/${currentUser.id}/favjobs`
 
     return (
         dispatch =>
@@ -93,15 +96,15 @@ export const sortFavorites = () => {
     );
 }
 
-export const clearFavorites = () => {
-    console.log("you clicked X!")
-    return(
-        dispatch => 
-        dispatch({
-            type: "CLEAR_FAVORITES"
-        })
-    );
-}
+// export const clearFavorites = () => {
+//     console.log("you clicked X!")
+//     return(
+//         dispatch => 
+//         dispatch({
+//             type: "CLEAR_FAVORITES"
+//         })
+//     );
+// }
 
 export const viewFavorites = () => {
     return(
@@ -112,35 +115,35 @@ export const viewFavorites = () => {
     );
 }
 
-// export const deleteFavorites = (jobData, currentUser) => {
-//     const URL = BASE_URL + `/${currentUser.id}/jobs/${jobData.id}`
+export const deleteFavorites = (favjobData, currentUser) => {
+    const URL = BASE_URL + `/${currentUser.id}/favjobs/${favjobData.id}`
 
-//     return (
-//         dispatch => {
-//             fetch(URL, {
-//                 method: "DELETE",
-//                 headers: {
-//                     "Content-Type": "application/json",
-//                     "Accept": "application/json"
-//                 }
-//             })
-//                 .then(res => res.json())
-//                 .then(data => {
-//                     dispatch({
-//                         type: "DELETE_FAVORITE",
-//                         payload: jobData
-//                     })
-//                 })
-//                 .catch(err => console.log(err.message))
-//         }
-//     )
-// }
-
-export const deleteFavorites = () => {
-    return(
-        dispatch => 
-        dispatch({
-            type: "DELETE_FAVORITES"
-        })
-    );
+    return (
+        dispatch => {
+            fetch(URL, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    dispatch({
+                        type: "DELETE_FAVORITE",
+                        payload: favjobData
+                    })
+                })
+                .catch(err => console.log(err.message))
+        }
+    )
 }
+
+// export const deleteFavorites = () => {
+//     return(
+//         dispatch => 
+//         dispatch({
+//             type: "DELETE_FAVORITES"
+//         })
+//     );
+// }

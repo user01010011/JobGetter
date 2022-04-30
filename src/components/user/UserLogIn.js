@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 
 import { userLogIn } from "../../redux/actions/UserAuthentication";
 
+import './Auth.css';
+
 class UserLogIn extends Component {   
     state = {
         username: "",
@@ -22,17 +24,16 @@ class UserLogIn extends Component {
     }
     render() {
         return (
-            <div className="log-in" style={{position: "fixed", top: "180px"}}>
-                <h2>Log in to Job Getter!</h2>
-                <br/>
-                <form onSubmit={this.handleOnSubmit}>
-                    <label className="label has-text-white"><strong>Username: </strong></label>
-                    <input className="input" type="text" name="username" value={this.state.username} onChange={this.handleOnChange} />
+            <div className="auth-container">
+                <h2 className="auth-header">Log in to Job Getter!</h2>
+                <form className="auth-form" onSubmit={this.handleOnSubmit}>
+                    <label className="auth-label"><strong>Username: </strong></label>
+                    <input className="auth-input" type="text" name="username" value={this.state.username} onChange={this.handleOnChange} />
                     <br/><br/>
-                    <label className="label has-text-white"><strong>Password: </strong></label>
-                    <input className="input" type="password" name="password" value={this.state.password} onChange={this.handleOnChange} />
+                    <label className="auth-label"><strong>Password: </strong></label>
+                    <input className="auth-input" type="password" name="password" value={this.state.password} onChange={this.handleOnChange} />
                     <br/><br/>
-                    <button className="button is-link" type="submit">Log In</button>
+                    <button className="auth-button" type="submit">Log In</button>
                 </form>
             </div>
         )

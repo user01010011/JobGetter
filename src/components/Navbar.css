@@ -1,0 +1,56 @@
+
+  .navbar {
+    background: #fff;
+    display: flex;
+    /* position: fixed; */
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-direction: row;
+  }
+
+  /* Home, About, Contact buttons: */
+  .navbar-left {
+    /* background: #fff; */
+    display: flex;
+    /* justify-content: space-between; */
+    /* justify-content: space-between; */
+    /* position: fixed; */
+  }
+
+  /* User log In and Sig Up buttons: */
+  .navbar-auth {
+    /* margin-top: 50px;
+    background: transparent;  */
+    /* background: #fff; */
+    display: flex;
+    /* justify-content: flex-end; */
+  }
+
+  .button-is-link {
+    /* justify-content: right; */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar-button {
+    font: roboto;
+    font-size: 16px;
+    /* background-color: #eee; */
+    border-color:#000;
+    white-space: nowrap;
+    text-align: center;
+    padding: 2px 5px;
+    margin: 5px;
+    /* border-radius: 25px; */
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  /* navbar button text link fonts */
+  li, a {
+    font-family: roboto, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:rgb(46, 46, 46);
+    text-decoration: none;
+  }

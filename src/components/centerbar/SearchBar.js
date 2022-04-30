@@ -8,7 +8,7 @@ import { sortFavorites } from "../../redux/actions/Favorites";
 class SearchBar extends Component {
     state = {
         job_title: "",
-        company: "",
+        job_company: "",
         job_location: ""
     }
 
@@ -26,7 +26,7 @@ class SearchBar extends Component {
         else if (event.target.id === "reset"){
             this.setState({
                 job_title: "",
-                company: "",
+                job_company: "",
                 job_location: ""
                 }
             )   
@@ -53,7 +53,7 @@ class SearchBar extends Component {
                     <br/>
                     <label className="label"><h4>Company Search: </h4></label>
                     <div className="control">
-                        <input className="input" type="text" name="company" placeholder="Enter Company Name" value={this.state.company} onChange={this.handleOnChange} />
+                        <input className="input" type="text" name="company" placeholder="Enter Company Name" value={this.state.job_company} onChange={this.handleOnChange} />
                     </div>
                     <br/>
                     <label className="label"><h4>Location Search: </h4></label>

@@ -1,18 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
-
-import UserHomeContainer from "./user/UserHomeContainer";
-import Home from "./Home";
+import UserHome from "./user/UserHome";
+import VisitorHome from "./VisitorHome";
+import './Home.css';
 
 const HomeContainer = (props) => {
     return (
-        <>
+        <div className="home-container">
             {props.isLoggedIn ? 
-                <UserHomeContainer /> 
+                <UserHome /> 
                 : 
-                <Home />
+                <VisitorHome />
             }
-        </>
+        </div>
     )
 }
 

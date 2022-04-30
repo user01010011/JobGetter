@@ -8,7 +8,7 @@ class JobList extends Component {
     const cards = this.props.jobs.map((job) => {
       return <JobCard key={job.id}
                    job_title={job.job_title}
-                   company={job.company}
+                   job_company={job.job_company}
                    job_location={job.job_location}
                    est_salary={job.est_salary} 
                    min_reqs={job.min_reqs}
