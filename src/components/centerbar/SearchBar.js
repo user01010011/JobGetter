@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
 import { searchQuery, clearSearch } from "../../redux/actions/Search";
 // import { searchQuery, clearSearch, sortSearch } from "../../redux/actions/Search";
 import { sortFavorites } from "../../redux/actions/Favorites";
+
+import '../user/Search.css'; 
 
 class SearchBar extends Component {
     state = {
@@ -42,23 +43,20 @@ class SearchBar extends Component {
 
     render() {
         return (
-            <div className="search-bar has-text-white">
+            <div className="searchbar">
+                <h3 className="search-header">Search for Top Tech Jobs </h3>
                 <form className="search-form">
-                    <label className="label"><h3>Search for Top Tech Jobs: </h3></label>
-                    <br/>
-                    <label className="label"><h4>Job Title Search: </h4></label>
-                    <div className="control">
-                        <input className="input" type="text" name="job_title" placeholder="Enter Job Title" value={this.state.job_title} onChange={this.handleOnChange} />
+                    <div className="search-form-item">
+                        <label className="form-label">Job Title Search:</label>
+                        <input className="form-input" type="text" name="job_title" placeholder="Enter Job Title" value={this.state.job_title} onChange={this.handleOnChange} />
                     </div>
-                    <br/>
-                    <label className="label"><h4>Company Search: </h4></label>
-                    <div className="control">
-                        <input className="input" type="text" name="company" placeholder="Enter Company Name" value={this.state.job_company} onChange={this.handleOnChange} />
+                    <div className="search-form-item">
+                        <label className="form-label">Company Search:</label>
+                        <input className="form-input" type="text" name="company" placeholder="Enter Company Name" value={this.state.job_company} onChange={this.handleOnChange} />
                     </div>
-                    <br/>
-                    <label className="label"><h4>Location Search: </h4></label>
-                    <div className="control">
-                        <select name="location" value={this.state.job_location} onChange={this.handleOnChange}>
+                    <div className="search-form-item">
+                    <label className="form-label">Location Search:</label>
+                        <select className="form-select" type="select" value={this.state.job_location} onChange={this.handleOnChange}>
                             <option value="all">ALL</option>
                             <option value="r">Remote</option> 
                             <option value="ny">New York, NY</option>
@@ -73,11 +71,10 @@ class SearchBar extends Component {
                             <option value="au">Austin, TX</option>
                         </select>
                     </div>
-                    <br/>
-                    <div className="buttons">
-                        <button className="button is-primary" id="submit" onClick={this.handleOnClick}>Submit</button>
-                        <button className="button is-danger" type="reset" id="reset" onClick={this.handleOnClick}>Reset</button>
-                        <button className="button is-warning" id="sort-search" onClick={this.handleOnClick}>Sort Searches</button>
+                    <div className="search-actions">
+                        <button className="search-button" id="submit" onClick={this.handleOnClick}>Submit</button>
+                        <button className="search-button" id="reset" onClick={this.handleOnClick}>Reset</button>
+                        {/* <button className="search-button" id="sort-search" onClick={this.handleOnClick}>Sort Searches</button> */}
                     </div>
                 </form>
             </div>

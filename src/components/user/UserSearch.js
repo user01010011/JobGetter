@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from '../centerbar/SearchBar';
 import SearchResults from '../search_result_display/SearchResults';
+import './Search.css';
 
 const UserSearch = () => {
 
@@ -10,7 +11,6 @@ const UserSearch = () => {
                 <SearchBar />
             </div>
             <div className="usersearch-searchresults"> 
-                <h4>Favorite Jobs</h4>
                 <SearchResults />
             </div>
         </div>
