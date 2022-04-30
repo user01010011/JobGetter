@@ -6,7 +6,7 @@ import './Home.css';
 
 const HomeContainer = (props) => {
     return (
-        <div className="home-container">
+        <div className="page-wrapper">
             {props.isLoggedIn ? 
                 <UserHome /> 
                 : 

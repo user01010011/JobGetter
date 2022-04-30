@@ -23,8 +23,8 @@ class UserLogIn extends Component {
   };
   render() {
     return (
-      <div className="auth-container">
-        <h2 className="auth-header">Log in to Job Getter!</h2>
+      <div className="page-wrapper">
+        <h2 className="header">Log in to Job Getter!</h2>
         <form className="auth-form" onSubmit={this.handleOnSubmit}>
           <label className="auth-label">
             <strong>Username: </strong>

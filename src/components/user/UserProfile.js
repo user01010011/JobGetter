@@ -1,125 +1,331 @@
-import React, { Component } from 'react'; 
-// import { userLogIn } from '../../redux/actions/UserAuthentication'; 
+import React, { Component } from "react";
+// import { userLogIn } from '../../redux/actions/UserAuthentication';
 import UserResume from "./UserResume";
-import './Profile.css';
+import "./Profile.css";
 
 class UserProfile extends Component {
-    state = {
-        username: "", 
-        password: "",
-        first_name: "",
-        last_name: "", 
-        email: "",
-        phone_number: "",
-        avatar: "",
-        bio: "",
-    }
+  state = {
+    username: "",
+    password: "",
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone_number: "",
+    avatar: "",
+    bio: "",
+    showEditPhoto: false,
+    showPhotoForm: false,
+    showProfileForm: false,
+  };
 
-    handleOnChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    }; 
+  handleOnChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
 
-    handleChangePhoto = (event) => {
-        console.log("you clicked change photo!")
-    }
+  hoverPhoto = () => {
+    this.setState({ showEditPhoto: true });
+  };
 
-    handleEditUsername = (event) => {
-        console.log("you clicked edit username!")
-    }
+  leavePhoto = () => {
+    this.setState({ showEditPhoto: false });
+  };
 
-    handleEditPassword = (event) => {
-        console.log("you clicked edit password!")
-    }
+  handleChangePhoto = () => {
+    console.log("you clicked change photo!");
+    this.setState((prevState) => ({
+      showPhotoForm: !prevState.showPhotoForm,
+    }));
+  };
 
-    handleEditBio = (event) => {
-        console.log("you clicked edit bio!")
-    }
+  handleEditProfile = () => {
+    console.log("you clicked edit profile!");
+    this.setState((prevState) => ({
+      showProfileForm: !prevState.showProfileForm,
+    }));
+  };
 
-    handleEditFirstName = (event) => {
-        console.log("you clicked edit first_name!")
-    }
-
-    handleEditLastName = (event) => {
-        console.log("you clicked edit last_name!")
-    }
-
-    handleEditPhone = (event) => {
-        console.log("you clicked edit phone_number!")
-    }
-
-
-    render() {
-        return (
-            <div className="userprofile">
-                <div className="userprofile-photo" id="profile-photo">
-                    <img style={{width: "160px", height:"160px", borderRadius:"80px"}} alt=""
-                    src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" 
-                    />
-                    <button className="edit-photo" id="edit-photo" onClick={this.handleChangePhoto}>Change Photo</button>
-                </div>
-                <div className="profile-info" id="profile-info">
-                    <div className="user-profile-info">
-                        <div className="user-profile-username" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="user-username" id="profile-username">Username: </label>
-                            <input className="user-username-input" type="text" name="user-username" value={this.state.username} onChange={this.handleOnChange}/>
-                            <button className="edit-username-btn" onClick={this.handleEditUsername}>Edit</button>
-                        </div><br/>
-                        <div className="user-profile-username" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="profile-password" id="profile-password">Password: </label>
-                            <input className="user-password" type="text" name="user-password" value={this.state.password} onChange={this.handleOnChange}/>
-                            <button className="edit-password-btn" onClick={this.handleEditPassword}>Edit</button>
-                        </div><br/>
-                        <div className="user-profile-bio" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="profile-bio" id="profile-bio">Bio: </label>
-                            <input className="user-bio" type="text" name="user-bio" value={this.state.bio} onChange={this.handleOnChange}/>
-                            <button className="edit-bio-btn" onClick={this.handleEditBio}>Edit</button>
-                        </div><br/>
-                        <div className="user-profile-first-name" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="profile-frst-name" id="profile-frst-name">First Name: </label>
-                            <input className="user-first-name" type="text" name="user-first-name" value={this.state.first_name} onChange={this.handleOnChange}/>
-                            <button className="edit-first-name-btn" onClick={this.handleEditFirstName}>Edit</button>
-                        </div><br/>
-                        <div className="user-profile-last-name" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="profile-last-name" id="profile-last-name">Last Name: </label>
-                            <input className="user-last-name" type="text" name="user-last-name" value={this.state.last_name} onChange={this.handleOnChange}/>
-                            <button className="edit-last-name-btn" onClick={this.handleEditLastName}>Edit</button>
-                        </div><br/>
-                        <div className="user-profile-email" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="profile-email" id="profile-email">Email: </label>
-                            <input className="user-email" type="text" name="user-email" value={this.state.email} onChange={this.handleOnChange}/>
-                            <button className="edit-email-btn" onClick={this.handleEditEmail}>Edit</button>
-                        </div><br/>
-                        <div className="user-profile-phone" style={{display: "flex", justifyContent:"space-between", width:"30%"}}>
-                            <label className="profile-phone" id="profile-phone">Phone Number: </label>
-                            <input className="user-phone" type="text" name="user-phone" value={this.state.phone_number} onChange={this.handleOnChange}/>
-                            <button className="edit-phone-btn" onClick={this.handleEditPhone}>Edit</button>
-                        </div><br/>
-                    </div>
-                    {/* <form>
-                        <label className="profile-username" id="profile-username">Username: </label>
-                        <input className="input-username" type="text" name="input-username" value={this.state.username} onChange={this.handleChangeUsername}/><br/><br/>
-                        <label className="profile-password" id="profile-password">Password: </label>
-                        <input className="input-password" type="text" name="input-password" value={this.state.password} onChange={this.handleChangePassword}/><br/><br/>
-                        <label className="profile-bio" id="profile-bio" onClick={this.handleChangeBio}>Bio: </label>
-                        <input className="input-bio" type="text" name="input-bio" value={this.state.bio} onChange={this.handleChangeBio}/><br/><br/>
-                        <label className="profile-frst-name" id="profile-frst-name">First Name: </label>
-                        <input className="input-first-name" type="text" name="input-first-name" value={this.state.first_name} onChange={this.handleChangeFirstName}/><br/><br/>
-                        <label className="profile-last-name" id="profile-last-name" onClick={this.handleChangeLastName}>Last Name: </label>
-                        <input className="input-last-name" type="text" name="input-last-name" value={this.state.last_name} onChange={this.handleChangeLastName}/><br/><br/>   
-                        <label className="profile-email" id="profile-email" onClick={this.handleEditEmail}>Email: </label>
-                        <input className="input-email" type="text" name="input-email" value={this.state.email} onChange={this.handleChangeEmail}/><br/><br/>
-                        <label className="profile-phone" id="profile-phone" onClick={this.handleChangePhone}>Phone Number: </label>
-                        <input className="input-phone" type="text" name="input-phone" value={this.state.phone_number} onChange={this.handleChangePhone}/><br/><br/>
-                        <button className="save-profile" id="save-profile" onClick={this.handleSaveProfile}>Save Profile</button>
-                    </form> */}
-                </div>
+  render() {
+    return (
+      <div className="userprofile">
+        {/* <h2 className="header">My Profile</h2> */}
+        <div className="userprofile-top">
+          <div className="userprofile-photo-container">
+            <img
+              className="userprofile-photo"
+              onClick={this.handleChangePhoto}
+              onMouseEnter={this.hoverPhoto}
+              onMouseLeave={this.leavePhoto}
+              alt="User Profile"
+              src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+            />
+            {this.state.showEditPhoto ? (
+              <div className="photo-overlay">
+            
+                <button
+                  className="edit-photo-button"
+                  onClick={this.handleChangePhoto}
+                >
+                  Change Photo
+                </button>
+              </div>
+            ) : (
+              ""
+            )}
+            {this.state.showPhotoForm ?
+            <div className="update-photo-container">
+                <form className="photo-form">
+                    <label className="form-label">Photo Url:</label>
+                    <input className="form-input" type="text" id="input-photo"/>
+                </form>
+                <span className="photo-actions">
+                    <button className="update-photo-button">Update</button>
+                    <button className="cancel-photo-button" onClick={this.handleChangePhoto}>Cancel</button>
+                </span>
 
             </div>
-        )
-    }
+        :
+        ""
+        }
+          </div>
+        </div>
+        <div className="userprofile-main">
+          {this.state.showProfileForm ? (
+            "Save changes to your profile below"
+          ) : (
+            <button className="edit-button" onClick={this.handleEditProfile}>
+              Edit Profile
+            </button>
+          )}
+          {this.state.showProfileForm ? (
+            <form className="userprofile-form">
+              <label className="form-label" id="profile-username">
+                Username:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-username"
+                placeholder={this.state.username}
+                onChange={this.handleChangeUsername}
+              />
+              <label className="form-label" id="profile-password">
+                Password:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-password"
+                placeholder={this.state.password}
+                onChange={this.handleChangePassword}
+              />
+              <label className="form-label" id="profile-bio">
+                Bio:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="input-bio"
+                placeholder={this.state.bio}
+                onChange={this.handleChangeBio}
+              />
+              <label className="form-label" id="profile-frst-name">
+                First Name:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-first-name"
+                placeholder={this.state.last_name}
+                onChange={this.handleChangeLastName}
+              />
+              <label className="form-label" id="profile-email">
+                Email:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-email"
+                placeholder={this.state.email}
+                onChange={this.handleChangeEmail}
+              />
+              <label className="form-label" id="profile-phone">
+                Phone Number:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-phone"
+                placeholder={this.state.phone_number}
+                onChange={this.handleChangePhone}
+              />
+              <span className="form-actions">
+                <button
+                  className="submit-button"
+                  id="userprofile-cancel-btn"
+                  type="submit"
+                  onClick={this.handleEditProfile}
+                >
+                  Cancel
+                </button>
+                <button
+                  className="submit-button"
+                  id="userprofile-submit-btn"
+                  type="submit"
+                  onClick={this.handleSaveProfile}
+                >
+                  Save Profile
+                </button>
+              </span>
+            </form>
+          ) : (
+            <div className="userprofile-info">
+              <div className="userprofile-item">
+                <span className="item-label">Username: </span>
+                <span className="item-value">{this.state.username}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Password: </span>
+                <span className="item-value">{this.state.password}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Bio: </span>
+                <span className="item-value">{this.state.bio}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">First Name: </span>
+                <span className="item-value">{this.state.first_name}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Last Name: </span>
+                <span className="item-value">{this.state.last_name}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Email: </span>
+                <span className="item-value">{this.state.email}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Phone: </span>
+                <span className="item-value">{this.state.phone}</span>
+              </div>
+            </div>
+          )}
+
+          {/* <div className="userprofile-edit-each">
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-username">
+                Username:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-username"
+                value={this.state.username}
+                onChange={this.handleOnChange}
+              />
+            </div>
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-password">
+                Password:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-password"
+                value={this.state.password}
+                onChange={this.handleOnChange}
+              />
+              <button className="edit-btn" onClick={this.handleEditPassword}>
+                Edit
+              </button>
+            </div>
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-bio">
+                Bio:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-bio"
+                value={this.state.bio}
+                onChange={this.handleOnChange}
+              />
+              <button className="edit-btn" onClick={this.handleEditBio}>
+                Edit
+              </button>
+            </div>
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-frst-name">
+                First Name:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-first-name"
+                value={this.state.first_name}
+                onChange={this.handleOnChange}
+              />
+              <button
+                className="edit-first-name-btn"
+                onClick={this.handleEditFirstName}
+              >
+                Edit
+              </button>
+            </div>
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-last-name">
+                Last Name:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-last-name"
+                value={this.state.last_name}
+                onChange={this.handleOnChange}
+              />
+              <button
+                className="edit-last-name-btn"
+                onClick={this.handleEditLastName}
+              >
+                Edit
+              </button>
+            </div>
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-email">
+                Email:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-email"
+                value={this.state.email}
+                onChange={this.handleOnChange}
+              />
+              <button className="edit-email-btn" onClick={this.handleEditEmail}>
+                Edit
+              </button>
+            </div>
+            <div className="userprofile-item">
+              <label className="form-label" id="profile-phone">
+                Phone Number:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                name="user-phone"
+                value={this.state.phone_number}
+                onChange={this.handleOnChange}
+              />
+              <button className="edit-phone-btn" onClick={this.handleEditPhone}>
+                Edit
+              </button>
+            </div>
+          </div> */}
+        </div>
+      </div>
+    );
+  }
 }
 
-
-export default UserProfile
+export default UserProfile;

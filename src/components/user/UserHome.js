@@ -4,6 +4,7 @@ import SearchBar from "../search/SearchBar";
 import SearchResults from "../search/SearchResults";
 // import UserProfile from "./UserProfile";
 import Sidebar from "../sidebar/Sidebar";
+import '../Home.css';
 
 const UserHome = () => {
   return (

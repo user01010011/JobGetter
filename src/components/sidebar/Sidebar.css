@@ -1,3 +1,9 @@
+.sidebar-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: left; 
+    text-align: left; 
+}
 .sidebar-menu {
     display: flex; 
     flex-direction: column;
@@ -11,12 +17,13 @@
     padding: 20px 0px; 
 }
 .userprofile-avatar {
-    width: 60px; 
-    height: 60px; 
+    width: 80px; 
+    height: 80px; 
     border-radius: 50px; 
 }
 .userprofile-username {
     color: #666666;
+    font-size: 16px; 
 }
 .sidebar-items {
     list-style: none;

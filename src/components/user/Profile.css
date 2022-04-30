@@ -1,3 +1,155 @@
 .userprofile {
     padding: 2rem 0rem; 
+    align-items: center; 
+    justify-content: center; 
 }
+.userprofile-banner {
+    justify-content: space-between; 
+}
+.userprofile-top {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+
+}
+.userprofile-photo-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+}
+.userprofile-photo {
+    width: 160px; 
+    height: 160px; 
+    border-radius: 80px; 
+}
+.userprofile-photo:hover {
+    cursor: pointer; 
+}
+/* .userprofile-edit-photo {
+    width: 160px; 
+    height: 80px; 
+    border-radius: 80px; 
+    position: absolute; 
+}
+.userprofile-edit-photo:hover {
+    cursor: pointer; 
+} */
+.photo-overlay {
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 2; 
+    /* background-color: transparent;  */
+}
+.edit-photo-button {
+    border: none; 
+    position: absolute; 
+    font-size: 18px; 
+    font-weight: 600; 
+    width: 160px; 
+    height: 80px; 
+    border-radius: 0px 0px 80px 80px;
+    /* left: 50%;  */
+    bottom: 0%; 
+    opacity: 0.5; 
+    background-color: white; 
+    color: black;
+}
+.edit-photo-button:hover {
+    cursor: pointer; 
+    opacity: 0.7;
+}
+.userprofile-main {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px 0px; 
+}
+.edit-photo-button {
+    font-size: 16px; 
+    padding: 2px 5px; 
+}
+.update-photo-container {
+    margin: 10px 0px; 
+    display: flex; 
+    flex-direction: row; 
+}
+.update-photo-button {
+    font-size: 15px; 
+    padding: 5px 10px; 
+    margin-right: 5px; 
+    background-color: black; 
+    color: white; 
+}
+.update-photo-button:hover {
+    cursor: pointer; 
+    font-weight: 600; 
+}
+.cancel-photo-button {
+    font-size: 15px; 
+    padding: 5px 10px; 
+    margin-right: 5px; 
+    background-color: white; 
+    color: black; 
+}
+.cancel-photo-button:hover {
+    cursor: pointer; 
+    font-weight: 600; 
+}
+.edit-button {
+    font-size: 16px; 
+    padding: 2px 5px; 
+}
+.edit-button:hover {
+    cursor: pointer; 
+    font-weight: 600; 
+}
+.userprofile-form {
+    display: flex; 
+    flex-direction: column; 
+    padding: 20px; 
+    width: 300px; 
+}
+.userprofile-info {
+    display: flex;
+    flex-direction: column; 
+    padding: 20px; 
+}
+.userprofile-item {
+    display: flex; 
+    flex-direction: row; 
+}
+.item-label {
+    margin-top: 10px; 
+    margin-right: 5px; 
+    font-size: 16px; 
+    font-weight: 600; 
+}
+.form-label {
+    margin-top: 10px; 
+    margin-right: 5px; 
+}
+.form-input {
+    margin-right: 5px; 
+    font-size: 18px; 
+}
+.form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 10px 0px;  */
+}
+/* .cancel-button {
+    font-size: 16px; 
+    padding: 5px 10px; 
+    flex: 0.3;
+}
+.submit-button {
+    flex: 0.7;
+} */
