@@ -1,14 +1,17 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
+import UserDashboard from "./UserDashboard";
 import UserSearch from "./UserSearch";
-import SearchBar from "../search/SearchBar";
-import SearchResults from "../search/SearchResults";
-// import UserProfile from "./UserProfile";
+import UserJobs from "./UserJobs";
+import UserProfile from "./UserProfile";
+import UserCompanies from "./UserCompanies";
+
 import Sidebar from "../sidebar/Sidebar";
-import '../Home.css';
+import "../Home.css";
 
 const UserHome = () => {
   return (
-    <div className="userhome" id="user-home">
+    <div className="userhome">
       <Sidebar />
     </div>
   );

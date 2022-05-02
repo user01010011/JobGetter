@@ -10,6 +10,12 @@ import {
 import "./Sidebar.css";
 
 class Sidebar extends Component {
+  constructor(props) {
+    super(props); 
+    this.state = {
+      username: ""
+    }; 
+  }
   render() {
     return (
       <div className="sidebar-container">
@@ -25,7 +31,7 @@ class Sidebar extends Component {
                   alt=""
                   src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
                 />
-                <h5 className="userprofile-username">Username</h5>
+                  <h5 className="userprofile-username">{this.state.username}</h5>
               </div>
             </Link>
           </div>
@@ -66,5 +72,6 @@ class Sidebar extends Component {
     );
   }
 }
+
 
 export default Sidebar;

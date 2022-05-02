@@ -24,25 +24,27 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />
-        <Switch>
-          <Route path="/signup" component={UserSignUp} />
-          <Route path="/login" component={UserLogIn} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route exact path="/" component={HomeContainer} />
-          <Route exact path="/home" component={UserHome} />
-          <Route path="/search" component={UserSearch} />
-          <Route path="/dashboard" component={UserDashboard} />
-          <Route path="/userjobs" component={UserJobs} />
-          <Route path="/profile" component={UserProfile} />
-          <Route path="/usercompanies" component={UserCompanies} />
-          <Route>
-            <InvalidPath />
-          </Route>
-        </Switch>
-        <Footer />
+        <div className="app-navbar">
+          <NavBar />
+            <Switch>
+              <Route path="/signup" component={UserSignUp} />
+              <Route path="/login" component={UserLogIn} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+            </Switch>
+        </div>
+        <div className="app-main">
+          <HomeContainer />
+            <Switch>
+              <Route path="/search" component={UserSearch} />
+              <Route path="/dashboard" component={UserDashboard} />
+              <Route path="/userjobs" component={UserJobs} />
+              <Route path="/profile" component={UserProfile} />
+              <Route path="/usercompanies" component={UserCompanies} />
+          </Switch>
+        </div>
       </Router>
+      <Footer />
     </div>
   );
 }

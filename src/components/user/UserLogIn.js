@@ -26,21 +26,17 @@ class UserLogIn extends Component {
       <div className="page-wrapper">
         <h2 className="header">Log in to Job Getter!</h2>
         <form className="auth-form" onSubmit={this.handleOnSubmit}>
-          <label className="auth-label">
-            <strong>Username: </strong>
-          </label>
+          <label className="form-label">Username:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="text"
             name="username"
             value={this.state.username}
             onChange={this.handleOnChange}
           />
-          <label className="auth-label">
-            <strong>Password: </strong>
-          </label>
+          <label className="form-label">Password:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="password"
             name="password"
             value={this.state.password}

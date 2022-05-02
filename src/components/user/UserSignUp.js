@@ -27,51 +27,41 @@ class UserSignUp extends Component {
       <div className="page-wrapper">
         <h2 className="header">Sign Up for Job Getter!</h2>
         <form className="auth-form" onSubmit={this.handleOnSubmit}>
-          <label className="auth-label">
-            <strong>First Name: </strong>
-          </label>
+          <label className="form-label">First Name:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="text"
             name="first_name"
             value={this.state.first_name}
             onChange={this.handleOnChange}
           />
-          <label className="auth-label">
-            <strong>Last Name: </strong>
-          </label>
+          <label className="form-label">Last Name:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="text"
             name="last_name"
             value={this.state.last_name}
             onChange={this.handleOnChange}
           />
-          <label className="auth-label">
-            <strong>Email: </strong>
-          </label>
+          <label className="form-label">Email:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="text"
             name="email"
             value={this.state.email}
             onChange={this.handleOnChange}
           />
-          <label className="auth-label">
-            <strong>Username: </strong>
-          </label>
+          <label className="form-label">Username:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="text"
             name="username"
             value={this.state.username}
             onChange={this.handleOnChange}
           />
-          <label className="auth-label">
-            <strong>Password: </strong>
-          </label>
+          <label className="form-label">Password:</label>
           <input
-            className="auth-input"
+            className="form-input"
             type="password"
             name="password"
             value={this.state.password}

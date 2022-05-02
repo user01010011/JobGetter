@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../App.css';
 // import ContactForm from "./ContactForm";
 
 // class Contact extends Component {
@@ -35,9 +36,7 @@ class Contact extends Component {
       <div className="page-wrapper" id="contact">
         <h2 className="header">Contact Us 💌 </h2>
         <form className="page-form" onSubmit={this.handleOnSubmit}>
-          <label className="form-label">
-            <strong>Full Name: </strong>
-          </label>
+          <label className="form-label">Full Name:</label>
           <input
             className="form-input"
             id="name-input"
@@ -46,9 +45,7 @@ class Contact extends Component {
             value={this.state.full_name}
             onChange={this.handleOnChange}
           />
-          <label className="form-label">
-            <strong>Phone #: </strong>
-          </label>
+          <label className="form-label">Phone #:</label>
           <input
             className="form-input"
             id="phone-input"
@@ -57,9 +54,7 @@ class Contact extends Component {
             value={this.state.phone_number}
             onChange={this.handleOnChange}
           />
-          <label className="form-label">
-            <strong>Email: </strong>
-          </label>
+          <label className="form-label">Email:</label>
           <input
             className="form-input"
             id="email-input"
@@ -68,11 +63,9 @@ class Contact extends Component {
             value={this.state.email}
             onChange={this.handleOnChange}
           />
-          <label className="form-label">
-            <strong>Message: </strong>
-          </label>
+          <label className="form-label">Message:</label>
           <textarea
-            className="form-input"
+            className="form-textarea"
             id="message-input"
             type="textarea"
             name="message"
