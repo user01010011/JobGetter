@@ -21,9 +21,9 @@ class Sidebar extends Component {
       <div className="sidebar-container">
         <div className="sidebar-menu">
           <div className="sidebar-top">
-            <Link to="/" className="sidebar-item-link">
+            {/* <Link to="/" className="sidebar-item-link">
               <span>Job Getter Logo</span>
-            </Link>
+            </Link> */}
             <Link to="/profile">
               <div className="userprofile-container">
                 <img

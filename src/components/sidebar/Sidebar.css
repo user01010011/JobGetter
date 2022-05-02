@@ -1,8 +1,8 @@
 .sidebar-container {
-    display: flex; 
-    flex-direction: column; 
-    align-items: left; 
+    /* display: flex; 
+    flex-direction: column;  */
     text-align: left; 
+    height: 100vh;
 }
 .sidebar-menu {
     display: flex; 
@@ -14,6 +14,7 @@
     align-items: center; 
 }
 .userprofile-container {
+    /* padding: 20px 0px;  */
     padding: 20px 0px; 
 }
 .userprofile-avatar {
