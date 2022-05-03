@@ -59,9 +59,10 @@
     padding: 1rem 0rem; 
 }
 .searchresults-action-container {
-    padding: 10px 0px; 
+ 
     display: flex; 
     flex-direction: row; 
+    padding: 10px 0px; 
 }
 .searchresults-action {
     margin-right: 20px; 

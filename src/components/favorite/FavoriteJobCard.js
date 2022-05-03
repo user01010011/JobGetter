@@ -1,16 +1,16 @@
 import React from "react";
 // import React, { useState } from "react";
+import './Favorite.css';
 
 const FavoriteJobCard = (props) => {
   // const [likes, setLikes] = useState(0) // [0, f(){}]
   return (
     <div
-      className="favorites-card has-background-light"
+      className="favoritejob-card"
       key={props.id}
       id={props.id}
     >
-      <ul className="favorite-jobs-list" id="favorite-jobs-list">
-        <br />
+      <ul className="favorite-jobs-list">
         <h4>{props.favjob.job_title}</h4>
         <li>Compnay: {props.favjob.job_company}</li>
         <li>Location: {props.favjob.job_location}</li>
@@ -20,7 +20,7 @@ const FavoriteJobCard = (props) => {
                 <li>Location: {props.job.job_location}</li>
                 <li>Est. Salary: {props.job.est_salary}</li> */}
         <button
-          className="delete-btn button is-small is-danger"
+          className="delete-button"
           onClick={props.delete}
         >
           X

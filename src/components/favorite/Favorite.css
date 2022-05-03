@@ -1,11 +1,52 @@
-  /* FavoritesBar.css for FavoritesBar.js */
-  .favorites-bar {
-    background: #fff;
-    /* height: 100%; */
-    display: flex;
-    flex-direction: column;
-    /* float: right;  */
-    /* padding-left: 30px; */
-    /* position: right; */
-    padding-right: 10px; 
-  }
+.favjobs {
+  display: flex; 
+  flex-direction: column; 
+}
+.userjobs-main {
+  display: flex; 
+  flex-direction: column; 
+}
+.userjobs-container {
+  margin: 10px 0px; 
+  padding: 10px 0px; 
+}
+.favorites-action-container {
+  display: flex; 
+  flex-direction: row; 
+  padding: 10px 0px; 
+}
+.favorites-action {
+  display: flex; 
+  flex-direction: row;
+  margin-right: 20px; 
+  vertical-align: center; 
+  justify-content: center; 
+  align-items: center; 
+}
+.search-label {
+  display: flex; 
+  flex-direction: row; 
+  margin-right: 10px; 
+  vertical-align: center; 
+  justify-content: center; 
+}
+.search-select {
+  padding: 2px 0px; 
+  font-size: 16px; 
+}
+.sort-icon-container {
+  width: 25px; 
+  height: 25px; 
+  border: solid 1px #0d0d0d; 
+  display: flex; 
+  align-items: center; 
+  vertical-align: center; 
+  justify-content: center; 
+  padding: 2px; 
+}
+.sort-icon {
+  border: none; 
+  background-color: transparent; 
+  font-size: 20px; 
+
+}
