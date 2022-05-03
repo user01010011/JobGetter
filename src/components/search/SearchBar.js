@@ -88,19 +88,20 @@ class SearchBar extends Component {
           </div>
           <div className="search-actions">
             <button
-              className="search-button"
-              id="submit"
-              onClick={this.handleOnClick}
-            >
-              Submit
-            </button>
-            <button
-              className="search-button"
+              className="cancel-button"
               id="reset"
               onClick={this.handleOnClick}
             >
               Reset
             </button>
+            <button
+              className="submit-button"
+              id="submit"
+              onClick={this.handleOnClick}
+            >
+              Submit
+            </button>
+
             {/* <button className="search-button" id="sort-search" onClick={this.handleOnClick}>Sort Searches</button> */}
           </div>
         </form>

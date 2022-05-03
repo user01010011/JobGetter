@@ -6,7 +6,7 @@
 .usersearch-container {
     width: 100%; 
     display: flex; 
-    flex-direction: row; 
+    flex-direction: column; 
 }
 .searchbar {
     /* background: #fff; */
@@ -41,7 +41,8 @@
     padding: 2px; 
 }
 .form-select {
-    height: 20px; 
+    font-size: 16px; 
+    padding: 2px; 
 }
 .search-actions {
     margin: 10px 0px; 
@@ -59,17 +60,40 @@
     padding: 1rem 0rem; 
 }
 .searchresults-action-container {
- 
     display: flex; 
     flex-direction: row; 
     padding: 10px 0px; 
 }
 .searchresults-action {
     margin-right: 20px; 
+    display: flex; 
+    flex-direction: row; 
 }
 .search-label {
     margin-right: 5px; 
 }
 .search-select {
     padding: 2px 0px; 
+}
+.cancel-button {
+    font-size: 16px; 
+    padding: 5px 10px; 
+    margin-right: 5px; 
+    background-color: white; 
+    color: black; 
+}
+.cancel-button:hover {
+    cursor: pointer; 
+    font-weight: 600; 
+}
+.submit-button {
+    font-size: 16px; 
+    padding: 5px 10px; 
+    margin-right: 5px; 
+    background-color: black; 
+    color: white; 
+}
+.submit-button:hover {
+    cursor: pointer; 
+    font-weight: 600; 
 }
