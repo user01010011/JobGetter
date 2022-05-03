@@ -1,9 +1,15 @@
 .usersearch {
     /* padding: 2rem 0rem;  */
-    padding: 3rem; 
+    padding: 0rem 3rem; 
+    /* flex: 0.7;  */
+}
+.usersearch-container {
+    width: 100%; 
+    display: flex; 
+    flex-direction: row; 
 }
 .searchbar {
-    background: #fff;
+    /* background: #fff; */
     /* height: 30%;
     /* float: right;  */
     /* position: right; */
@@ -12,15 +18,15 @@
     flex-direction: column;
     /* justify-content: left; */
   }
-.search-form {
-    display: flex;
-    flex-direction: column; 
-    margin: 10px 0px; 
-}
 .search-header {
     font-size: 20px; 
     margin: 10px 0px; 
     padding: 0px; 
+}
+.search-form {
+    display: flex;
+    flex-direction: column; 
+    margin: 10px 0px; 
 }
 .search-form-item {
     margin: 10px 0px; 

@@ -25,10 +25,12 @@ class UserProfile extends Component {
   };
 
   hoverPhoto = () => {
+    // console.log("you hovered over profile photo!");
     this.setState({ showEditPhoto: true });
   };
 
   leavePhoto = () => {
+    // console.log("you left profile photo!");
     this.setState({ showEditPhoto: false });
   };
 
@@ -51,44 +53,52 @@ class UserProfile extends Component {
       <div className="userprofile">
         {/* <h2 className="header">My Profile</h2> */}
         <div className="userprofile-top">
-          <div className="userprofile-photo-container">
+          <div
+            className="userprofile-photo-container"
+            onMouseEnter={this.hoverPhoto}
+            onMouseLeave={this.leavePhoto}
+          >
             <img
               className="userprofile-photo"
-              onClick={this.handleChangePhoto}
-              onMouseEnter={this.hoverPhoto}
-              onMouseLeave={this.leavePhoto}
               alt="User Profile"
               src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
             />
             {this.state.showEditPhoto ? (
-              <div className="photo-overlay">
-            
-                <button
-                  className="edit-photo-button"
-                  onClick={this.handleChangePhoto}
-                >
-                  Change Photo
-                </button>
+              <div className="photo-overlay" onClick={this.handleChangePhoto}>
+                <button className="edit-photo-button">Change Photo</button>
               </div>
             ) : (
               ""
             )}
-            {this.state.showPhotoForm ?
-            <div className="update-photo-container">
-                <form className="photo-form">
-                    <label className="form-label">Photo Url:</label>
-                    <input className="form-input" type="text" id="input-photo"/>
-                </form>
-                <span className="photo-actions">
-                    <button className="update-photo-button">Update</button>
-                    <button className="cancel-photo-button" onClick={this.handleChangePhoto}>Cancel</button>
-                </span>
-
-            </div>
-        :
-        ""
-        }
+            {/* {this.state.showEditPhoto ? (
+              <div className="photo-overlay"
+                  onClick={this.handleChangePhoto}
+                >
+                  Change Photo
+              </div>
+            ) : (
+              ""
+            )} */}
           </div>
+          {this.state.showPhotoForm ? (
+            <div className="update-photo-container">
+              <form className="photo-form">
+                <label className="form-label">Photo Url:</label>
+                <input className="form-input" type="text" id="input-photo" />
+              </form>
+              <span className="photo-actions">
+                <button className="update-photo-button">Update</button>
+                <button
+                  className="cancel-photo-button"
+                  onClick={this.handleChangePhoto}
+                >
+                  Cancel
+                </button>
+              </span>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className="userprofile-main">
           {this.state.showProfileForm ? (

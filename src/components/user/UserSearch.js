@@ -6,10 +6,8 @@ import "./Search.css";
 const UserSearch = () => {
   return (
     <div className="usersearch">
-      <div className="usersearch-searchbar">
+      <div className="usersearch-container">
         <SearchBar />
-      </div>
-      <div className="usersearch-searchresults">
         <SearchResults />
       </div>
     </div>

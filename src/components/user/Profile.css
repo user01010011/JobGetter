@@ -1,9 +1,10 @@
 .userprofile {
     /* padding: 2rem 0rem;  */
-    padding: 3rem; 
+    padding: 0rem 3rem; 
     /* align-items: center; 
     justify-content: center;  */
     min-width: 500px; 
+    /* flex: 0.7;  */
 }
 .userprofile-banner {
     justify-content: space-between; 
@@ -22,49 +23,70 @@
     justify-content: center; 
     position: relative; 
 }
+/* .userprofile-photo-container:hover {
+    cursor: pointer; 
+    opacity: 1; 
+} */
 .userprofile-photo {
+    display: block; 
     width: 160px; 
     height: 160px; 
     border-radius: 80px; 
 }
 .userprofile-photo:hover {
     cursor: pointer; 
+    opacity: 0.5;
 }
-/* .userprofile-edit-photo {
-    width: 160px; 
-    height: 80px; 
-    border-radius: 80px; 
+.photo-overlay1 {
     position: absolute; 
-}
-.userprofile-edit-photo:hover {
-    cursor: pointer; 
-} */
-.photo-overlay {
-    position: absolute; 
-    top: 0; 
+    /* top: 0;  */
     bottom: 0; 
-    left: 0; 
-    right: 0; 
-    z-index: 2; 
-    /* background-color: transparent;  */
-}
-.edit-photo-button {
-    border: none; 
-    position: absolute; 
-    font-size: 18px; 
-    font-weight: 600; 
+    /* left: 0; 
+    right: 0;  */
     width: 160px; 
     height: 80px; 
     border-radius: 0px 0px 80px 80px;
+    /* color: white;
+    background-color: black;  */
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    opacity: 0; 
+    font-size: 20px; 
+    text-align: center; 
+    transition: .5s ease; 
+}
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    /* color: #f1f1f1; */
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.8;
+    /* background-color: white; */
+    background-color: white;
+    color: black;
+    font-weight: 600; 
+    padding: 20px;
+    text-align: center;
+}
+.photo-overlay:hover {
+    cursor: pointer;  
+    opacity: 0.9;
+}
+.edit-photo-button {
+    border: none; 
+    /* position: absolute;  */
+    font-size: 13px; 
+    font-weight: 600; 
     /* left: 50%;  */
-    bottom: 0%; 
-    opacity: 0.5; 
-    background-color: white; 
+    opacity: 0.9; 
+    /* background-color: white;  */
     color: black;
 }
 .edit-photo-button:hover {
     cursor: pointer; 
-    opacity: 0.7;
+    opacity: 1;
 }
 .userprofile-main {
     display: flex; 
@@ -79,6 +101,16 @@
 }
 .update-photo-container {
     margin: 10px 0px; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+}
+.photo-form {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+}
+.photo-actions {
     display: flex; 
     flex-direction: row; 
 }
@@ -116,8 +148,8 @@
 .userprofile-form {
     display: flex; 
     flex-direction: column; 
+    min-width: 350px; 
     padding: 20px; 
-    width: 300px; 
 }
 .userprofile-info {
     display: flex;

@@ -1,8 +1,9 @@
 .sidebar-container {
-    /* display: flex; 
-    flex-direction: column;  */
     text-align: left; 
+    /* position: fixed;  */
+    width: 160px; 
     height: 100vh;
+    /* flex: 0.3; */
 }
 .sidebar-menu {
     display: flex; 
@@ -11,11 +12,12 @@
 .sidebar-top {
     display: flex; 
     flex-direction: column; 
+    width: 160px; 
     align-items: center; 
 }
 .userprofile-container {
     /* padding: 20px 0px;  */
-    padding: 20px 0px; 
+    padding: 10px 0px; 
 }
 .userprofile-avatar {
     width: 80px; 

@@ -1,6 +1,7 @@
 .dashboard {
     /* padding: 2rem 0rem;  */
-    padding: 3rem; 
+    padding: 0rem 3rem; 
+    /* flex: 0.7;  */
 }
 .dashboard-header {
     font-size: 20px; 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import UserDashboard from "./UserDashboard";
 import UserSearch from "./UserSearch";
 import UserJobs from "./UserJobs";
@@ -13,6 +13,16 @@ const UserHome = () => {
   return (
     <div className="userhome">
       <Sidebar />
+      <Switch>
+        {/* <Route exact path="/">
+          <Redirect to="/search" />
+        </Route> */}
+        <Route path="/search" component={UserSearch} />
+        <Route path="/dashboard" component={UserDashboard} />
+        <Route path="/userjobs" component={UserJobs} />
+        <Route path="/profile" component={UserProfile} />
+        <Route path="/usercompanies" component={UserCompanies} />
+      </Switch>
     </div>
   );
 };

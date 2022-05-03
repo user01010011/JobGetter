@@ -1,28 +1,9 @@
 .userjobs {
     /* padding: 2rem 0rem;  */
-    padding: 3rem; 
+    padding: 0rem 3rem; 
+    /* flex: 0.7;  */
 }
 .job-header {
     font-size: 20px; 
     margin: 10px 0px; 
 }
-.userjobs-block {
-    margin-bottom: 10px; 
-}
-ul.job-list {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-  }
-
-ul.favorite-jobs-list {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
-}
-
-#display-results-card {
-    display: flex;
-    flex-direction: column;
-}
-

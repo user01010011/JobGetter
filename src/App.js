@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import NavBar from "./components/Navbar";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -26,22 +31,15 @@ function App() {
       <Router>
         <div className="app-navbar">
           <NavBar />
-            <Switch>
-              <Route path="/signup" component={UserSignUp} />
-              <Route path="/login" component={UserLogIn} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-            </Switch>
+          <Switch>
+            <Route path="/signup" component={UserSignUp} />
+            <Route path="/login" component={UserLogIn} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
         </div>
         <div className="app-main">
           <HomeContainer />
-            <Switch>
-              <Route path="/search" component={UserSearch} />
-              <Route path="/dashboard" component={UserDashboard} />
-              <Route path="/userjobs" component={UserJobs} />
-              <Route path="/profile" component={UserProfile} />
-              <Route path="/usercompanies" component={UserCompanies} />
-          </Switch>
         </div>
       </Router>
       <Footer />
