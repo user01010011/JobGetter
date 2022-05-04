@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 // import { userLogIn } from '../../redux/actions/UserAuthentication';
 import UserResume from "./UserResume";
 import "./Profile.css";
@@ -110,36 +111,6 @@ class UserProfile extends Component {
           )}
           {this.state.showProfileForm ? (
             <form className="userprofile-form">
-              <label className="form-label" id="profile-username">
-                Username:{" "}
-              </label>
-              <input
-                className="form-input"
-                type="text"
-                id="input-username"
-                placeholder={this.state.username}
-                onChange={this.handleChangeUsername}
-              />
-              <label className="form-label" id="profile-password">
-                Password:{" "}
-              </label>
-              <input
-                className="form-input"
-                type="text"
-                id="input-password"
-                placeholder={this.state.password}
-                onChange={this.handleChangePassword}
-              />
-              <label className="form-label" id="profile-bio">
-                Bio:{" "}
-              </label>
-              <input
-                className="form-input"
-                type="text"
-                name="input-bio"
-                placeholder={this.state.bio}
-                onChange={this.handleChangeBio}
-              />
               <label className="form-label" id="profile-frst-name">
                 First Name:{" "}
               </label>
@@ -147,7 +118,17 @@ class UserProfile extends Component {
                 className="form-input"
                 type="text"
                 id="input-first-name"
-                placeholder={this.state.last_name}
+                placeholder={this.props.user.first_name}
+                onChange={this.handleChangeFirstName}
+              />
+              <label className="form-label" id="profile-frst-name">
+                Last Name:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-first-name"
+                placeholder={this.props.user.last_name}
                 onChange={this.handleChangeLastName}
               />
               <label className="form-label" id="profile-email">
@@ -157,8 +138,28 @@ class UserProfile extends Component {
                 className="form-input"
                 type="text"
                 id="input-email"
-                placeholder={this.state.email}
+                placeholder={this.props.user.email}
                 onChange={this.handleChangeEmail}
+              />
+              <label className="form-label" id="profile-username">
+                Username:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-username"
+                placeholder={this.props.user.username}
+                onChange={this.handleChangeUsername}
+              />
+              <label className="form-label" id="profile-password">
+                Password:{" "}
+              </label>
+              <input
+                className="form-input"
+                type="text"
+                id="input-password"
+                placeholder="********"
+                onChange={this.handleChangePassword}
               />
               <label className="form-label" id="profile-phone">
                 Phone Number:{" "}
@@ -167,8 +168,20 @@ class UserProfile extends Component {
                 className="form-input"
                 type="text"
                 id="input-phone"
-                placeholder={this.state.phone_number}
+                placeholder={this.props.user.phone_number}
                 onChange={this.handleChangePhone}
+              />
+              <label className="form-label" id="profile-bio">
+                Bio:{" "}
+              </label>
+              <textarea
+                className="form-textarea"
+                type="textarea"
+                name="input-bio"
+                cols="50"
+                rows="5"
+                placeholder={this.props.user.bio}
+                onChange={this.handleChangeBio}
               />
               <span className="form-actions">
                 <button
@@ -192,32 +205,54 @@ class UserProfile extends Component {
           ) : (
             <div className="userprofile-info">
               <div className="userprofile-item">
-                <span className="item-label">Username: </span>
-                <span className="item-value">{this.state.username}</span>
-              </div>
-              <div className="userprofile-item">
-                <span className="item-label">Password: </span>
-                <span className="item-value">{this.state.password}</span>
-              </div>
-              <div className="userprofile-item">
-                <span className="item-label">Bio: </span>
-                <span className="item-value">{this.state.bio}</span>
-              </div>
-              <div className="userprofile-item">
                 <span className="item-label">First Name: </span>
-                <span className="item-value">{this.state.first_name}</span>
+                <span className="item-value">{this.props.user.first_name}</span>
               </div>
               <div className="userprofile-item">
                 <span className="item-label">Last Name: </span>
-                <span className="item-value">{this.state.last_name}</span>
+                <span className="item-value">{this.props.user.last_name}</span>
               </div>
               <div className="userprofile-item">
                 <span className="item-label">Email: </span>
-                <span className="item-value">{this.state.email}</span>
+                <span className="item-value">{this.props.user.email}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Username: </span>
+                <span className="item-value">{this.props.user.username}</span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Password: </span>
+                <span className="item-value">********</span>
               </div>
               <div className="userprofile-item">
                 <span className="item-label">Phone: </span>
-                <span className="item-value">{this.state.phone}</span>
+                <span className="item-value">
+                  {this.props.user.phone ? (
+                    this.props.user.phone
+                  ) : (
+                    <button
+                      className="edit-button"
+                      onClick={this.handleEditProfile}
+                    >
+                      Add
+                    </button>
+                  )}
+                </span>
+              </div>
+              <div className="userprofile-item">
+                <span className="item-label">Bio: </span>
+                <span className="item-value">
+                  {this.props.user.bio ? (
+                    this.props.user.bio
+                  ) : (
+                    <button
+                      className="edit-button"
+                      onClick={this.handleEditProfile}
+                    >
+                      Add
+                    </button>
+                  )}
+                </span>
               </div>
             </div>
           )}
@@ -338,4 +373,12 @@ class UserProfile extends Component {
   }
 }
 
-export default UserProfile;
+// export default UserProfile;
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.auth.currentUser,
+  };
+};
+
+export default connect(mapStateToProps)(UserProfile);

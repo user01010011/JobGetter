@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import {
   MdOutlineDashboard,
@@ -8,13 +9,16 @@ import {
   MdSentimentVerySatisfied,
 } from "react-icons/md";
 import "./Sidebar.css";
+// import { presetToOptions } from "webpack/lib/Stats";
 
 class Sidebar extends Component {
   constructor(props) {
-    super(props); 
+    super(props);
     this.state = {
-      username: ""
-    }; 
+      first_name: "", 
+      username: "",
+      email: "",
+    };
   }
   render() {
     return (
@@ -31,7 +35,7 @@ class Sidebar extends Component {
                   alt=""
                   src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
                 />
-                  <h5 className="userprofile-username">{this.state.username}</h5>
+                <h5 className="userprofile-username">{this.props.user.first_name}</h5>
               </div>
             </Link>
           </div>
@@ -73,5 +77,12 @@ class Sidebar extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return ({
+    user: state.auth.currentUser
+  })
+}
 
-export default Sidebar;
+// export default Sidebar;
+
+export default connect(mapStateToProps)(Sidebar);
